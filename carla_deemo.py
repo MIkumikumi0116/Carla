@@ -24,7 +24,7 @@ class GlobalVariable:
     IM_FOV = 110
 
     sdfsgsdffvrwvew
-
+    sdsa
 
 
 class CarlaDeemo:
