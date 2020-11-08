@@ -24,6 +24,9 @@ class GlobalVariable:
     IM_FOV = 110
 
 
+ZSFDhgkbl
+
+
 
 class CarlaDeemo:
     def __init__(self):
