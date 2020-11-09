@@ -29,7 +29,7 @@ class Carla_Enviroment:
 
         self.car_list = []
         self.actor_list = []
-        self.world = self.client.load_world('Town02')
+        self.world = self.client.load_world('Town04')
         self.blueprint_library = self.world.get_blueprint_library()
 
     def Show_camera_image(self, image):
@@ -145,9 +145,7 @@ class Carla_Enviroment:
                 car.get_location())
             car_lane_type = car_waypoint.lane_type
             print(str(car_lane_type))
-            v = car.get_velocity()
-            print('Speed:   % 15.0f km/h' %
-                  (3.6 * math.sqrt(v.x**2 + v.y**2 + v.z**2)))
+            self.output_speed(car.get_velocity())
             car_extent = car.bounding_box.extent
             car_length = 2 * car_extent.x
             print(str(car_length))
@@ -164,30 +162,59 @@ class Carla_Enviroment:
     def Destory_all_actor(self):
         for actor in self.actor_list:
             actor.destory()
-
         self.car_list = []
         self.actor_list = []
 
     def get_foward_car(self):
+        random.shuffle(self.car_list)
         while True:
-            for C1 in self.car_list:
-                car_lane_id = self.get_car_waypoint_id(C1)
-                count = 0
-                for car in self.car_list:
-                    if self.get_car_waypoint_id(
-                            car) == car_lane_id:
+            for i in range(len(self.car_list)):
+                i_waypoint = Carla_Enviroment.get_waypoint(
+                    self, self.car_list[i])
+                i_lane_id = i_waypoint.lane_id
+                i_road_id = i_waypoint.road_id
+                i_length = len(i_waypoint.next_until_lane_end(0.5))
+                min = 10000
+                index = 0
+                count = 1
+                for j in range(len(self.car_list)):
+                    j_waypoint = Carla_Enviroment.get_waypoint(
+                        self, self.car_list[j])
+                    j_length = len(j_waypoint.next_until_lane_end(0.5))
+                    if i_road_id == j_waypoint.road_id and j_waypoint.lane_id == i_lane_id and i != j:
+                        if i_length > j_length and abs(i_length -
+                                                       j_length) < min:
+                            min = abs(i_length - j_length)
+                            index = j
                         count += 1
-                        print(str(car_lane_id) + ':{}'.format(count))
-            time.sleep(0.5)
+                print(
+                    str(i_road_id) + '号道路的' + str(i_lane_id) + '号车道' +
+                    '共:{}辆车'.format(count))
+                if min != 10000:
+                    print('{}'.format(i) + '号车的前车是' + '{}'.format(index) +
+                          '号车')
+                    print('两车的距离为{}'.format(min * 2) + '米')
+                else:
+                    print('{}'.format(i) + '号车为该车道第一辆车')
+            time.sleep(0.3)
 
-    def get_car_waypoint_id(self,car):
+    '''
+    def get_waypoint_lane_id(self, car):
         car_waypoint = self.world.get_map().get_waypoint(car.get_location())
         car_lane_id = car_waypoint.lane_id
         return car_lane_id
+    '''
+
+    def output_speed(self, v):
+        print('Speed:   % 15.0f km/h' %
+              (3.6 * math.sqrt(v.x**2 + v.y**2 + v.z**2)))
+
+    def get_waypoint(self, car):
+        '''获得waypoint对象'''
+        return self.world.get_map().get_waypoint(car.get_location())
 
 
 def main():
-    
     carla_Enviroment = Carla_Enviroment()
 
     while True:
