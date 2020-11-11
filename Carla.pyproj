@@ -21,6 +21,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Car.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Carla.py" />
     <Compile Include="carla_deemo.py" />
     <Compile Include="car_control.py">
