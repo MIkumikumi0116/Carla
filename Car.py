@@ -1,13 +1,23 @@
 # 关于Carla中的车的各项属性
+import glob
+import os
+import sys
 
-import time
-import random
-import numpy as np
-import custom_car
-import carla
+try:
+    sys.path.append(
+        glob.glob('../carla/dist/carla-*%d.%d-%s.egg' %
+                  (sys.version_info.major, sys.version_info.minor,
+                   'win-amd64' if os.name == 'nt' else 'linux-x86_64'))[0])
+except IndexError:
+    pass
+
 from carla_enviroment import GlobeVar
-import sympy as sp
 import math
+from sensor_manager import CollisionSensor
+from sensor_manager import IMUSensor
+from sensor_manager import LaneInvasionSensor
+from sensor_manager import RadarSensor
+from sensor_manager import GnssSensor
 
 
 class Car():
@@ -158,3 +168,9 @@ class Car():
         my_length = len(self.waypoint.next_until_lane_end(0.5))
         return self.get_back_car(self.road_id, self.lane_id, my_length)
 
+    def toggle_radar(self):
+        if self.radar_sensor is None:
+            self.radar_sensor = RadarSensor(self.car)
+        elif self.radar_sensor.sensor is not None:
+            self.radar_sensor.sensor.destroy()
+            self.radar_sensor = None
