@@ -182,7 +182,7 @@ class RadarSensor(object):
 
 
 class LaneInvasionSensor(object):
-    def __init__(self, parent_actor, hud):
+    def __init__(self, parent_actor):
         self.sensor = None
         self._parent = parent_actor
         world = self._parent.get_world()
