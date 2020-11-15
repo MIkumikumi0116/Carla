@@ -7,6 +7,7 @@ import carla
 from carla_enviroment import GlobeVar
 import sympy as sp
 import math
+from car_control import Car_control
 
 
 class Change_lane_model(object):
@@ -21,9 +22,10 @@ class Change_lane_model(object):
         self.rf_vehicle = car.get_rf_vehicle()
         self.next_vehicle = car.get_next_vehicle()
         self.last_vehicle = car.get_last_vehicle()
+        self.control = Car_control(car)
         self.lane_change = None
 
-    def road_change_model_left(self, vehicle):
+    def lane_change_model_left(self, vehicle):
         '''换道模型'''
         distance = self.car.get_waypoint_distance(vehicle, 0.5)
         vf = self.carcar.get_speed(vehicle.get_velocity())
@@ -41,23 +43,31 @@ class Change_lane_model(object):
         a = 5 * limit_speed
         if distance >= 5 * a:
             if random.random() < 0.1:
+                self.lane_change = 'Left'
+                self.control.change_lane(self.lane_change)
                 return True
         else:
             if self.speed >= limit_speed:
                 if distance < 2.4 * self.speed:
                     if left_distance_f > distance and left_distance_b < 1.2 * lb_vehicle_speed:
+                        self.lane_change = 'Left'
+                        self.control.change_lane(self.lane_change)
                         return True
             else:
                 if lf_vehicle_speed > self.speed:
                     if lf_vehicle_speed > 1.5 * vf:
                         if left_distance_f > 1.2 * self.speed and left_distance_b > 1.2 * lb_vehicle_speed:
+                            self.lane_change = 'Left'
+                            self.control.change_lane(self.lane_change)
                             return True
                 else:
                     if lf_vehicle_speed > 1.5 * vf:
                         if left_distance_f > 2.4 * self.speed and left_distance_b > 1.2 * lb_vehicle_speed:
+                            self.lane_change = 'Left'
+                            self.control.change_lane(self.lane_change)
                             return True
 
-    def road_change_model_right(self, vehicle):
+    def lane_change_model_right(self, vehicle):
         '''换道模型'''
         distance = self.car.get_waypoint_distance(vehicle, 0.5)
         vf = self.carcar.get_speed(vehicle.get_velocity())
@@ -75,18 +85,26 @@ class Change_lane_model(object):
         a = 5 * limit_speed
         if distance >= 5 * a:
             if random.random() < 0.1:
+                self.lane_change = 'Right'
+                self.control.change_lane(self.lane_change)
                 return True
         else:
             if self.speed >= limit_speed:
                 if distance < 2.4 * self.speed:
                     if right_distance_f > distance and right_distance_b < 1.2 * rb_vehicle_speed:
+                        self.lane_change == 'Right'
+                        self.control.change_lane(self.lane_change)
                         return True
             else:
                 if rf_vehicle_speed > self.speed:
                     if rf_vehicle_speed > 1.5 * vf:
                         if right_distance_f > 1.2 * self.speed and right_distance_b > 1.2 * rb_vehicle_speed:
+                            self.lane_change == 'Right'
+                            self.control.change_lane(self.lane_change)
                             return True
                 else:
                     if rf_vehicle_speed > 1.5 * vf:
                         if right_distance_f > 2.4 * self.speed and right_distance_b > 1.2 * rb_vehicle_speed:
+                            self.lane_change == 'Right'
+                            self.control.change_lane(self.lane_change)
                             return True
