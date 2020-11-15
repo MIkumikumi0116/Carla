@@ -70,3 +70,4 @@ class Follow_model(object):
         result = sp.solve(sp.Eq(eq, 0), t)
         acc_max = vt.evalf(subs={t: result})
         return acc_max
+

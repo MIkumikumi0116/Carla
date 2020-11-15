@@ -8,9 +8,9 @@ from carla_enviroment import CarlaEnviroment
 
 class CustomCar:
     '''所有自定义车辆的基类'''
-    def __init__(self,bp,transform):
+    def __init__(self, bp, transform):
         '''依据蓝图和位置生成车辆'''
-        self.car = CarlaEnviroment.world.try_spawn_actor(bp,transform)
+        self.car = CarlaEnviroment.world.try_spawn_actor(bp, transform)
         if self.car == NULL:
             return NULL
 
@@ -21,61 +21,73 @@ class CustomCar:
         '''虚函数，由各派生类实现'''
         pass
 
-    def Mount_RGB_Cam(self,transform):
+    def Mount_RGB_Cam(self, transform):
         '''安装RGB摄像机'''
         RGB_cam_bp = CarlaEnviroment.Get_Bp('sensor.camera.rgb')
-        RGB_cam_bp.set_attribute('image_size_x',str(GlobeVar.IM_WIDTH))
-        RGB_cam_bp.set_attribute('image_size_y',str(GlobeVar.IM_HEIGHT))
-        RGB_cam_bp.set_attribute('fov',str(GlobeVar.IM_FOV))
+        RGB_cam_bp.set_attribute('image_size_x', str(GlobeVar.IM_WIDTH))
+        RGB_cam_bp.set_attribute('image_size_y', str(GlobeVar.IM_HEIGHT))
+        RGB_cam_bp.set_attribute('fov', str(GlobeVar.IM_FOV))
 
-        self.RGB_cam = world.spawn_actor(RGB_cam_bp,transform,attach_to=self.car)
-        self.RGB_cam.listen(lambda image: UserInterface.Show_camera_image(image))
+        self.RGB_cam = world.spawn_actor(RGB_cam_bp,
+                                         transform,
+                                         attach_to=self.car)
+        self.RGB_cam.listen(
+            lambda image: UserInterface.Show_camera_image(image))
         CarlaEnviroment.Add_Actor(self.RGB_cam)
 
         self.RGB_cam_received_data = NULL
         #self.RGB_cam_received_data_copy = NULL   详情见：每零点一秒执行一次的函数(self)
-        self.RGB_cam.listen(lambda image: CarDemo.On_RGB_Cinema_Received_Data(image))
+        self.RGB_cam.listen(
+            lambda image: CarDemo.On_RGB_Cinema_Received_Data(image))
 
-    def On_RGB_Cam_Received_Data(self,image):
+    def On_RGB_Cam_Received_Data(self, image):
         '''虚函数，由各派生类实现'''
         pass
 
     def Mount_Collision_Detector(self):
         '''安装碰撞探测器'''
-        collision_detector_bp = CarlaEnviroment.Get_Bp('sensor.other.collision')
-        transform = CarlaEnviroment.Get_Transform(x = 0, z = 0)
+        collision_detector_bp = CarlaEnviroment.Get_Bp(
+            'sensor.other.collision')
+        transform = CarlaEnviroment.Get_Transform(x=0, z=0)
 
-        self.collision_detector = CarlaEnviroment.world.spawn_actor(collision_detector_bp,transform,attach_to = self.car)
+        self.collision_detector = CarlaEnviroment.world.spawn_actor(
+            collision_detector_bp, transform, attach_to=self.car)
         CarlaEnviroment.Add_Actor(self.collision_detector)
-        
+
         self.collision_detector_received_data = NULL
         #self.collision_detector_received_data_copy = NULL
-        self.collision_detector.listen(lambda collision_event : self.On_Collision_Detector_Received_Data(collision_event))
+        self.collision_detector.listen(
+            lambda collision_event: self.On_Collision_Detector_Received_Data(
+                collision_event))
 
-    def On_Collision_Detector_Received_Data(self,collision_event):
+    def On_Collision_Detector_Received_Data(self, collision_event):
         '''虚函数，由各派生类实现'''
         pass
 
     def Mount_Obstacle_Detector(self):
         '''安装障碍探测器'''
         obstacle_detector_bp = CarlaEnviroment.Get_Bp('sensor.other.obstacle')
-        transform = CarlaEnviroment.Get_Transform(x = 0, z = 0)
+        transform = CarlaEnviroment.Get_Transform(x=0, z=0)
 
-        self.obstacle_detector = CarlaEnviroment.world.spawn_actor(obstacle_detector_bp,transform,attach_to = self.car)
+        self.obstacle_detector = CarlaEnviroment.world.spawn_actor(
+            obstacle_detector_bp, transform, attach_to=self.car)
         CarlaEnviroment.Add_Actor(self.obstacle_detector)
 
         self.obstacle_detector_received_data = NULL
         #self.obstacle_detector_received_data_copy = NULL
-        self.obstacle_detector.listen(lambda obstacle_detection_event: self.On_Obstacle_Detector_Received_Data(obstacle_detection_event))
+        self.obstacle_detector.listen(
+            lambda obstacle_detection_event: self.
+            On_Obstacle_Detector_Received_Data(obstacle_detection_event))
 
-    def On_Obstacle_Detector_Received_Data(self,obstacle_detection_event):
+    def On_Obstacle_Detector_Received_Data(self, obstacle_detection_event):
         '''虚函数，由各派生类实现'''
         pass
 
+
 class CarWithCarema(CustomCar):
-    def __init__(self,bp,car_transform,cam_transform):
+    def __init__(self, bp, car_transform, cam_transform):
         '''生成汽车，并安装RGB摄像机'''
-        self.car = CarlaEnviroment.world.try_spawn_actor(bp,transform)
+        self.car = CarlaEnviroment.world.try_spawn_actor(bp, transform)
         if self.car == NULL:
             return NULL
 
@@ -85,15 +97,16 @@ class CarWithCarema(CustomCar):
 
         return self.car
 
-    def On_RGB_Cam_Received_Data(self,image):
+    def On_RGB_Cam_Received_Data(self, image):
         UserInterface.Show_camera_image(image)
         pass
 
+
 class CarDemo(CustomCar):
     '''示例：安装RGB摄像机、碰撞探测器、障碍探测器，有行驶模型的车'''
-    def __init__(self,bp,transform):
+    def __init__(self, bp, transform):
         '''生成汽车，并安装RGB摄像机、碰撞探测器、障碍探测器'''
-        self.car = CarlaEnviroment.world.try_spawn_actor(bp,transform)
+        self.car = CarlaEnviroment.world.try_spawn_actor(bp, transform)
         if self.car == NULL:
             return NULL
 
@@ -105,15 +118,15 @@ class CarDemo(CustomCar):
 
         return self.car
 
-    def On_RGB_Cam_Received_Data(self,image):
+    def On_RGB_Cam_Received_Data(self, image):
         self.RGB_cinema_received_data = image
         pass
 
-    def On_Collision_Detector_Received_Data(self,collision_event):
+    def On_Collision_Detector_Received_Data(self, collision_event):
         self.collision_detector_received_data = collision_event
         pass
 
-    def On_Obstacle_Detector_Received_Data(self,obstacle_detection_event):
+    def On_Obstacle_Detector_Received_Data(self, obstacle_detection_event):
         self.obstacle_detector_received_data = obstacle_detection_event
         pass
 
@@ -132,4 +145,3 @@ class CarDemo(CustomCar):
 
         #应用车辆控制
         pass
-        

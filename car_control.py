@@ -52,3 +52,5 @@ class Car_control():
                 self.car.apply_control(
                     carla.VehicleControl(throttle=0.0, steer=0.0, brake=0.0))
             time.sleep(0.01)
+
+    def road_change(self):
