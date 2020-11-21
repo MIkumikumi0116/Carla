@@ -23,8 +23,7 @@ class GlobalVariable:
     IM_HEIGHT = 480
     IM_FOV = 110
 
-    sdfsgsdffvrwvew
-    sdsa
+
 
 
 class CarlaDeemo:
@@ -172,6 +171,6 @@ def main():
     
 
 
-#if __name__ == '__main__':
+if __name__ == '__main__':
 
-#    main()
+    main()
