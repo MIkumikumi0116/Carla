@@ -13,7 +13,7 @@ import random
 import numpy as np
 import custom_car
 
-#Carla要求先写这一坨才能import carla
+# Carla要求先写这一坨才能import carla
 try:
     sys.path.append(
         glob.glob('../carla/dist/carla-*%d.%d-%s.egg' %
@@ -25,12 +25,12 @@ except IndexError:
 import carla
 
 
-#为方便所有模块调用，将所有全局变量封装到一起
+# 为方便所有模块调用，将所有全局变量封装到一起
 class GlobeVar:
-    IM_WIDTH = 640  #摄像机横向分辨率
-    IM_HEIGHT = 480  #摄像机纵向分辨率
-    IM_FOV = 110  #摄像机视野角度
-    FOLLOW_RANGE = 100 # 跟驰模型适用范围
+    IM_WIDTH = 640  # 摄像机横向分辨率
+    IM_HEIGHT = 480  # 摄像机纵向分辨率
+    IM_FOV = 110  # 摄像机视野角度
+    FOLLOW_RANGE = 100  # 跟驰模型适用范围
 
 
 class CarlaEnviroment:
@@ -187,12 +187,12 @@ class SpawnCars:
         print('\n')
 
 
-def main():
-    '''主程序，需要测试啥就往里面写啥'''
-    carla_enviroment = CarlaEnviroment()
+# def main():
+#     '''主程序，需要测试啥就往里面写啥'''
+#     carla_enviroment = CarlaEnviroment()
 
-    while True:
-        carla_enviroment.Genratar_cars()
+#     while True:
+#         carla_enviroment.Genratar_cars()
 
 
 #if __name__ == '__main__':

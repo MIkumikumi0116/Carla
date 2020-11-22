@@ -32,7 +32,6 @@
     <Compile Include="change_lane_model.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="custom_car.py" />
     <Compile Include="carla_enviroment.py">
       <SubType>Code</SubType>
     </Compile>

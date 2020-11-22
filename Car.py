@@ -11,13 +11,19 @@ try:
 except IndexError:
     pass
 
-from carla_enviroment import GlobeVar
 import math
 from sensor_manager import CollisionSensor
 from sensor_manager import IMUSensor
 from sensor_manager import LaneInvasionSensor
 from sensor_manager import RadarSensor
 from sensor_manager import GnssSensor
+
+
+class GlobeVar:
+    IM_WIDTH = 640  # 摄像机横向分辨率
+    IM_HEIGHT = 480  # 摄像机纵向分辨率
+    IM_FOV = 110  # 摄像机视野角度
+    FOLLOW_RANGE = 100  # 跟驰模型适用范围
 
 
 class Car():
