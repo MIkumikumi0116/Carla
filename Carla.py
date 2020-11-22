@@ -16,6 +16,7 @@ except IndexError:
     pass
 
 import carla
+from Car import Car
 
 IM_WIDTH = 1280
 IM_HEIGHT = 720
@@ -139,16 +140,17 @@ class Carla_Enviroment:
             except:
                 spawn_failed_count += 1
 
-        for car in new_car_list:
-            car.set_autopilot(True)
-            car_waypoint = self.world.get_map().get_waypoint(
-                car.get_location())
+        for vehicle in new_car_list:
+            vehicle.set_autopilot(True)
+            car = Car(vehicle, self.world)
+            car_waypoint = car.get_waypoint()
+            # car_waypoint = self.world.get_map().get_waypoint(
+            #     car.get_location())
             car_lane_type = car_waypoint.lane_type
             print(str(car_lane_type))
-            self.output_speed(car.get_velocity())
-            car_extent = car.bounding_box.extent
-            car_length = 2 * car_extent.x
-            print(str(car_length))
+            self.output_speed(car.velocity)
+            car_length = 2 * car.get_length()
+            print('车长' + str(car_length))
 
         print('\n')
         print('原有汽车数量：' + str(exist_car_count))
