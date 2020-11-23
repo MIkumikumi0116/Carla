@@ -198,6 +198,13 @@ class Carla_Enviroment:
                     print('{}'.format(i) + '号车为该车道第一辆车')
             time.sleep(0.3)
 
+    '''
+    def get_waypoint_lane_id(self, car):
+        car_waypoint = self.world.get_map().get_waypoint(car.get_location())
+        car_lane_id = car_waypoint.lane_id
+        return car_lane_id
+    '''
+
     def output_speed(self, v):
         print('Speed:   % 15.0f km/h' %
               (3.6 * math.sqrt(v.x**2 + v.y**2 + v.z**2)))
