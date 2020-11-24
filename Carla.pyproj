@@ -25,15 +25,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Carla.py" />
-    <Compile Include="carla_deemo.py" />
     <Compile Include="car_control.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="change_lane_model.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="custom_car.py" />
-    <Compile Include="carla_enviroment.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="follow_model.py">

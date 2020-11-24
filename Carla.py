@@ -16,6 +16,7 @@ except IndexError:
     pass
 
 import carla
+from Car import Car
 
 IM_WIDTH = 1280
 IM_HEIGHT = 720
@@ -138,16 +139,18 @@ class Carla_Enviroment:
                     break
             except:
                 spawn_failed_count += 1
+        random.shuffle(self.car_list)
 
-        for car in new_car_list:
-            car.set_autopilot(True)
-            car_waypoint = self.world.get_map().get_waypoint(
-                car.get_location())
+        for vehicle in new_car_list:
+            vehicle.set_autopilot(True)
+            car = Car(vehicle, self.world, self.car_list)
+            # car_waypoint = self.world.get_map().get_waypoint(
+            #     car.get_location())
+            car_waypoint = car.waypoint()
             car_lane_type = car_waypoint.lane_type
             print(str(car_lane_type))
-            self.output_speed(car.get_velocity())
-            car_extent = car.bounding_box.extent
-            car_length = 2 * car_extent.x
+            self.output_speed(car.velocity)
+            car_length = 2 * car.get_length()
             print(str(car_length))
 
         print('\n')

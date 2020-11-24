@@ -24,17 +24,16 @@ class Car():
     def __init__(self, vehicle, world, vehicle_list):
         '''初始化，将vechile,world传入'''
         self.vehicle = vehicle
-        self.id = self.get_self_vehicle_id()
         self.extent = self.vehicle.extent
         self.collision_sensor = None
         self.lane_invasion_sensor = None
         self.gnss_sensor = None
         self.imu_sensor = None
         self.radar_sensor = None
-
+        self.car_list = vehicle_list
+        self.id = self.get_self_vehicle_id()
         self.acc = None
         self.velocity = self.vehicle.get_velocity()
-        self.vehicle_list = vehicle_list
         # carlist在生成时就需要先随机排序
         self.waypoint = self.get_waypoint(self.vehicle)
         self.waypoint_list = None
