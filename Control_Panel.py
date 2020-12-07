@@ -1,32 +1,36 @@
 from sys import argv as SYS_argv
 from sys import exit as SYS_exit
 from Control_Panel_UI import Ui_MainWindow
-from PyQt5.QtWidgets import QMainWindow,QApplication
+from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtGui import QIntValidator
-
-
 
 EVALUATION_AREA_HEIGHT = 1000
 
 
-
 class Buile_In_Evevt:
-    def __init__(self,main_window):
+    def __init__(self, main_window):
         self.main_window = main_window
 
         self.UI_loaded = False
 
-    def resizeEvent(self,event):
+    def resizeEvent(self, event):
         if self.buile_in_evevt.UI_loaded:
-            self.main_window.Evaluation_scrollArea_Widget.setGeometry(0,0,self.main_window.Evaluation_scrollArea.geometry().width() - 26,EVALUATION_AREA_HEIGHT)
-            self.main_window.Evaluatio_GridWidget.setGeometry(0,0,self.main_window.Evaluation_scrollArea_Widget.geometry().width() - 26,self.main_window.Evaluation_scrollArea_Widget.geometry().height())
+            self.main_window.Evaluation_scrollArea_Widget.setGeometry(
+                0, 0,
+                self.main_window.Evaluation_scrollArea.geometry().width() - 26,
+                EVALUATION_AREA_HEIGHT)
+            self.main_window.Evaluatio_GridWidget.setGeometry(
+                0, 0,
+                self.main_window.Evaluation_scrollArea_Widget.geometry().width(
+                ) - 26,
+                self.main_window.Evaluation_scrollArea_Widget.geometry().
+                height())
         else:
             self.buile_in_evevt.UI_loaded = True
 
 
-
 class Setting_Panel(QMainWindow):
-    def __init__(self,main_window):
+    def __init__(self, main_window):
         self.main_window = main_window
 
         self.main_lane_triffic = 0
@@ -40,37 +44,55 @@ class Setting_Panel(QMainWindow):
 
         QMainWindow.__init__(self)
         intValidator = QIntValidator(self)
-        intValidator.setRange(0,100)
+        intValidator.setRange(0, 100)
         self.main_window.Main_Lane_Triffic_LineEdit.setValidator(intValidator)
         self.main_window.Ramp_Lane_Triffic_LineEdit.setValidator(intValidator)
         self.main_window.Truck_Mixing_Rate_LineEdit.setValidator(intValidator)
         self.main_window.Auto_Driving_Rate_LineEdit.setValidator(intValidator)
         self.main_window.Simulation_Stride_LineEdit.setValidator(intValidator)
 
-        intValidator.setRange(0,300)
+        intValidator.setRange(0, 300)
         self.main_window.Speed_Setting_LineEdit.setValidator(intValidator)
-       
-        self.main_window.Main_Lane_Triffic_LineEdit.textChanged.connect(self.On_main_lane_triffic_lineedit_textChanged)
-        self.main_window.Ramp_Lane_Triffic_LineEdit.textChanged.connect(self.On_ramp_lane_triffic_lineedit_textChanged)
-        self.main_window.Truck_Mixing_Rate_LineEdit.textChanged.connect(self.On_truck_mixing_rate_lineedit_textChanged)
-        self.main_window.Speed_Setting_LineEdit.textChanged.connect(self.On_speed_setting_lineedit_textChanged)
-        self.main_window.Auto_Driving_Rate_LineEdit.textChanged.connect(self.On_auto_driving_rate_lineedit_textChanged)
-        self.main_window.Simulation_Stride_LineEdit.textChanged.connect(self.On_simulation_stride_lineedit_textChanged)
 
-        self.main_window.Main_Lane_Triffic_Scrollbar.valueChanged.connect(self.On_main_lane_triffic_scrollbar_valueChanged)
-        self.main_window.Ramp_Lane_Triffic_Scrollbar.valueChanged.connect(self.On_ramp_lane_triffic_scrollbar_valueChanged)
-        self.main_window.Truck_Mixing_Rate_Scrollbar.valueChanged.connect(self.On_truck_mixing_rate_scrollbar_valueChanged)
-        self.main_window.Speed_Setting_Scrollbar.valueChanged.connect(self.On_speed_setting_scrollbar_valueChanged)
-        self.main_window.Auto_Driving_Rate_Scrollbar.valueChanged.connect(self.On_auto_driving_rate_scrollbar_valueChanged)
-        self.main_window.Simulation_Stride_Scrollbar.valueChanged.connect(self.On_simulation_stride_scrollbar_valueChanged)
+        self.main_window.Main_Lane_Triffic_LineEdit.textChanged.connect(
+            self.On_main_lane_triffic_lineedit_textChanged)
+        self.main_window.Ramp_Lane_Triffic_LineEdit.textChanged.connect(
+            self.On_ramp_lane_triffic_lineedit_textChanged)
+        self.main_window.Truck_Mixing_Rate_LineEdit.textChanged.connect(
+            self.On_truck_mixing_rate_lineedit_textChanged)
+        self.main_window.Speed_Setting_LineEdit.textChanged.connect(
+            self.On_speed_setting_lineedit_textChanged)
+        self.main_window.Auto_Driving_Rate_LineEdit.textChanged.connect(
+            self.On_auto_driving_rate_lineedit_textChanged)
+        self.main_window.Simulation_Stride_LineEdit.textChanged.connect(
+            self.On_simulation_stride_lineedit_textChanged)
 
-        self.main_window.Following_Model_RadioB.toggled.connect(self.Running_following_model)
-        self.main_window.Lane_Change_Model_RadioB.toggled.connect(self.Running_lane_change_model)
-        
-        self.main_window.New_Simulation_Button.clicked.connect(self.On_new_simulation_button_clicked)
-        self.main_window.Pause_Simulation_Button.clicked.connect(self.On_pause_simulation_button_clicked)
-        self.main_window.End_Simulation_Button.clicked.connect(self.On_end_simulation_button_clicked)
-        self.main_window.Export_Data_Button.clicked.connect(self.On_exoprt_simulation_button_clicked)
+        self.main_window.Main_Lane_Triffic_Scrollbar.valueChanged.connect(
+            self.On_main_lane_triffic_scrollbar_valueChanged)
+        self.main_window.Ramp_Lane_Triffic_Scrollbar.valueChanged.connect(
+            self.On_ramp_lane_triffic_scrollbar_valueChanged)
+        self.main_window.Truck_Mixing_Rate_Scrollbar.valueChanged.connect(
+            self.On_truck_mixing_rate_scrollbar_valueChanged)
+        self.main_window.Speed_Setting_Scrollbar.valueChanged.connect(
+            self.On_speed_setting_scrollbar_valueChanged)
+        self.main_window.Auto_Driving_Rate_Scrollbar.valueChanged.connect(
+            self.On_auto_driving_rate_scrollbar_valueChanged)
+        self.main_window.Simulation_Stride_Scrollbar.valueChanged.connect(
+            self.On_simulation_stride_scrollbar_valueChanged)
+
+        self.main_window.Following_Model_RadioB.toggled.connect(
+            self.Running_following_model)
+        self.main_window.Lane_Change_Model_RadioB.toggled.connect(
+            self.Running_lane_change_model)
+
+        self.main_window.New_Simulation_Button.clicked.connect(
+            self.On_new_simulation_button_clicked)
+        self.main_window.Pause_Simulation_Button.clicked.connect(
+            self.On_pause_simulation_button_clicked)
+        self.main_window.End_Simulation_Button.clicked.connect(
+            self.On_end_simulation_button_clicked)
+        self.main_window.Export_Data_Button.clicked.connect(
+            self.On_exoprt_simulation_button_clicked)
 
     def On_main_lane_triffic_lineedit_textChanged(self):
         text = self.main_window.Main_Lane_Triffic_LineEdit.text()
@@ -81,7 +103,7 @@ class Setting_Panel(QMainWindow):
         elif text[0] == '0' and len(text) > 1:
             for i in range(len(text)):
                 if text[0] == '0':
-                   text = text.replace('0','',1)
+                    text = text.replace('0', '', 1)
 
             if len(text) == 0:
                 text = '0'
@@ -98,7 +120,7 @@ class Setting_Panel(QMainWindow):
         elif text[0] == '0' and len(text) > 1:
             for i in range(len(text)):
                 if text[0] == '0':
-                   text = text.replace('0','',1)
+                    text = text.replace('0', '', 1)
 
             if len(text) == 0:
                 text = '0'
@@ -115,7 +137,7 @@ class Setting_Panel(QMainWindow):
         elif text[0] == '0' and len(text) > 1:
             for i in range(len(text)):
                 if text[0] == '0':
-                   text = text.replace('0','',1)
+                    text = text.replace('0', '', 1)
 
             if len(text) == 0:
                 text = '0'
@@ -132,7 +154,7 @@ class Setting_Panel(QMainWindow):
         elif text[0] == '0' and len(text) > 1:
             for i in range(len(text)):
                 if text[0] == '0':
-                   text = text.replace('0','',1)
+                    text = text.replace('0', '', 1)
 
             if len(text) == 0:
                 text = '0'
@@ -149,7 +171,7 @@ class Setting_Panel(QMainWindow):
         elif text[0] == '0' and len(text) > 1:
             for i in range(len(text)):
                 if text[0] == '0':
-                   text = text.replace('0','',1)
+                    text = text.replace('0', '', 1)
 
             if len(text) == 0:
                 text = '0'
@@ -166,7 +188,7 @@ class Setting_Panel(QMainWindow):
         elif text[0] == '0' and len(text) > 1:
             for i in range(len(text)):
                 if text[0] == '0':
-                   text = text.replace('0','',1)
+                    text = text.replace('0', '', 1)
 
             if len(text) == 0:
                 text = '1'
@@ -175,34 +197,40 @@ class Setting_Panel(QMainWindow):
         self.setting_panel.simulation_stride = eval(text)
 
     def On_main_lane_triffic_scrollbar_valueChanged(self):
-        self.main_window.Main_Lane_Triffic_LineEdit.setText(str(self.main_window.Main_Lane_Triffic_Scrollbar.value()))
+        self.main_window.Main_Lane_Triffic_LineEdit.setText(
+            str(self.main_window.Main_Lane_Triffic_Scrollbar.value()))
         pass
 
     def On_ramp_lane_triffic_scrollbar_valueChanged(self):
-        self.main_window.Ramp_Lane_Triffic_LineEdit.setText(str(self.main_window.Ramp_Lane_Triffic_Scrollbar.value()))
+        self.main_window.Ramp_Lane_Triffic_LineEdit.setText(
+            str(self.main_window.Ramp_Lane_Triffic_Scrollbar.value()))
         pass
 
     def On_truck_mixing_rate_scrollbar_valueChanged(self):
-        self.main_window.Truck_Mixing_Rate_LineEdit.setText(str(self.main_window.Truck_Mixing_Rate_Scrollbar.value()))
+        self.main_window.Truck_Mixing_Rate_LineEdit.setText(
+            str(self.main_window.Truck_Mixing_Rate_Scrollbar.value()))
         pass
 
     def On_speed_setting_scrollbar_valueChanged(self):
-        self.main_window.Speed_Setting_LineEdit.setText(str(self.main_window.Speed_Setting_Scrollbar.value()))
+        self.main_window.Speed_Setting_LineEdit.setText(
+            str(self.main_window.Speed_Setting_Scrollbar.value()))
         pass
 
     def On_auto_driving_rate_scrollbar_valueChanged(self):
-        self.main_window.Auto_Driving_Rate_LineEdit.setText(str(self.main_window.Auto_Driving_Rate_Scrollbar.value()))
+        self.main_window.Auto_Driving_Rate_LineEdit.setText(
+            str(self.main_window.Auto_Driving_Rate_Scrollbar.value()))
         pass
 
     def On_simulation_stride_scrollbar_valueChanged(self):
-        self.main_window.Simulation_Stride_LineEdit.setText(str(self.main_window.Simulation_Stride_Scrollbar.value()))
+        self.main_window.Simulation_Stride_LineEdit.setText(
+            str(self.main_window.Simulation_Stride_Scrollbar.value()))
         pass
 
-    def Running_following_model(self,event):
+    def Running_following_model(self, event):
         if event == True:
             self.current_model = 0
-        
-    def Running_lane_change_model(self,event):
+
+    def Running_lane_change_model(self, event):
         if event == True:
             self.current_model = 1
 
@@ -219,8 +247,7 @@ class Setting_Panel(QMainWindow):
         print(4)
 
 
-
-class Main_Window(QMainWindow,Ui_MainWindow):
+class Main_Window(QMainWindow, Ui_MainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         self.setupUi(self)
@@ -243,8 +270,7 @@ class Main_Window(QMainWindow,Ui_MainWindow):
         self.setting_panel.buile_in_evevt = self.buile_in_evevt
         self.setting_panel.setting_panel = self.setting_panel
 
-        
-        
+
 if __name__ == '__main__':
     app = QApplication(SYS_argv)
     mainWindow = Main_Window()

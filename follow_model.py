@@ -47,27 +47,19 @@ class Follow_model(object):
             pow(vf, 2) / a / 2, 1 + car_length)
         lam = 2 if d < 100 else 0
         acc = 0.41 * (v_p - vb) + lam * (1 - s_d / d)
+        
         return acc
 
     def follow_model_one(self, car, car_acc, distance, T, alpha):
         '''获得跟驰模型加速度'''
         '''参数依次为：车，加速度，距离，敏感度，最优速度，反应速度'''
-        t = sp.Symbol('t', real=True)
-        # 时间
         vt = 6.75 + 7.91 * np.tanh(0.13 * (distance - self.length) - 1.57)
-        # 最优速度
-        seg_alpha = sp.Function('seg_alpha')
-        seg_beta = sp.Function('seg_beta')
-        seg_gama = sp.Function('seg_gama')
+        vx = 7.91 * 0.13 * (1 - pow(np.tanh(0.13 *
+                                            (distance) - car.length), 2), 1.57)
         # 三个表达式
-        seg_alpha = 2 / (2 * T + alpha**2 * T**2 * sp.diff(vt, t))
-        seg_beta = 2 * alpha * sp.diff(vt,
-                                       t) / (2 + alpha**2 * T * sp.diff(vt, t))
-        seg_gama = alpha**2 * T * sp.diff(
-            vt, t) / (2 + alpha**2 * T * sp.diff(vt, t))
-        eq = seg_alpha * (
-            vt - self.velocity) + seg_beta * self.velocity + seg_gama * car_acc
-        result = sp.solve(sp.Eq(eq, 0), t)
-        acc_max = vt.evalf(subs={t: result})
-        return acc_max
-
+        a1 = 2 / (2 * T + alpha**2 * T**2 * vx)
+        a2 = 2 * alpha * vx / (2 + alpha**2 * T * vx)
+        a3 = alpha**2 * T * vx / (2 + alpha**2 * T * vx)
+        acc = a1 * (vt - self.car.speed) + a2 * (abs(self.car.speed -
+                                                     car.speed)) + a3 * car.acc
+        return acc

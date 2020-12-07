@@ -6,9 +6,6 @@ import numpy as np
 
 import carla
 
-import sympy as sp
-import math
-
 
 class Car_control():
     '''汽车控制类，控制汽车的各种行为'''

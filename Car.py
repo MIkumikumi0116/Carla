@@ -19,18 +19,28 @@ from sensor_manager import RadarSensor
 from sensor_manager import GnssSensor
 
 
+class GlobeVar:
+    IM_WIDTH = 1280
+    IM_HEIGHT = 720
+    IM_FOV = 110
+    FOLLOW_RANGE = 100
+
+
 class Car():
     '''车的基本属性类'''
     def __init__(self, vehicle, world, vehicle_list):
         '''初始化，将vechile,world传入'''
         self.vehicle = vehicle
-        self.extent = self.vehicle.extent
+        self.world = world
+        self.extent = self.vehicle.bounding_box.extent
         self.collision_sensor = None
         self.lane_invasion_sensor = None
         self.gnss_sensor = None
         self.imu_sensor = None
         self.radar_sensor = None
         self.car_list = vehicle_list
+        self.location = self.vehicle.get_location()
+        self.velocity = self.vehicle.get_velocity()
         self.id = self.get_self_vehicle_id()
         self.acc = None
         self.velocity = self.vehicle.get_velocity()
@@ -38,10 +48,8 @@ class Car():
         self.waypoint = self.get_waypoint(self.vehicle)
         self.waypoint_list = None
         self.lane_id = self.waypoint.lane_id
-        self.road_id = self.wyapoint.road_id
+        self.road_id = self.waypoint.road_id
         self.append_sensors()
-        self.location = self.car.get_location()
-        self.velocity = self.car.get_velocity()
         self.lb_vehicle = None
         self.lf_vehicle = None
         self.rb_vehicle = None
@@ -54,7 +62,7 @@ class Car():
         '''获得waypoint对象'''
         return self.world.get_map().get_waypoint(vehicle.get_location())
 
-    def get_waypoint_list(waypoint, index):
+    def get_waypoint_list(self, waypoint, index):
         '''返回航点所得距离'''
         return waypoint.next_until_lane_end(index)
 
@@ -65,7 +73,7 @@ class Car():
     def get_self_vehicle_id(self):
         '''获得本车id'''
         for i in range(len(self.car_list)):
-            if self.get_location() == self.location:
+            if self.vehicle.get_location() == self.location:
                 return i
 
     def get_car_list(self, world):
@@ -94,7 +102,7 @@ class Car():
         self.gnss_sensor = GnssSensor(self.vehicle)
         self.imu_sensor = IMUSensor(self.vehicle)
 
-    def get_nearby_car(self):
+    def get_nearby_vehicle(self):
         '''获得本车周围车道的车辆,若返回-1则说明无满足条件的车'''
         self.lb_vehicle = self.get_lb_vehicle()
         self.lf_vehicle = self.get_lf_vehicle()
@@ -115,7 +123,7 @@ class Car():
         if abs(self.lane_id) == 1:
             '''为1或-1则没有左边的车道'''
             return None
-        my_length = len(self.waypoint_list)
+        my_length = len(self.get_waypoint_list(self.waypoint, 0.5))
         my_lane_id = self.lane_id + 1 if self.lane_id < 0 else self.lane_id - 1
         # 车道id由0向右呈降序，向左呈升序
         return self.get_back_vehicle(self.road_id, my_lane_id, my_length)
@@ -125,21 +133,21 @@ class Car():
         if abs(self.lane_id) == 1:
             '''为1则不能向左换道'''
             return None
-        my_length = len(self.waypoint_list)
+        my_length = len(self.get_waypoint_list(self.waypoint, 0.5))
         my_lane_id = self.lane_id + 1 if self.lane_id < 0 else self.lane_id - 1
         # 车道id由0向右呈降序，向左呈升序
         return self.get_forward_vehicle(self.road_id, my_lane_id, my_length)
 
     def get_rb_vehicle(self):
         '''获得右车道后一辆车'''
-        my_length = len(self.waypoint.next_until_lane_end(0.5))
+        my_length = len(self.get_waypoint_list(self.waypoint, 0.5))
         my_lane_id = self.lane_id + 1 if self.lane_id > 0 else self.lane_id - 1
         # 车道id由0向右呈降序，向左呈升序
         return self.get_back_vehicle(self.road_id, my_lane_id, my_length)
 
     def get_rf_vehicle(self):
         '''获得右车道前一辆车'''
-        my_length = len(self.waypoint.next_until_lane_end(0.5))
+        my_length = len(self.get_waypoint_list(self.waypoint, 0.5))
         my_lane_id = self.lane_id + 1 if self.lane_id > 0 else self.lane_id - 1
         # 车道id由0向右呈降序，向左呈升序
         return self.get_forward_vehicle(self.road_id, my_lane_id, my_length)
@@ -151,7 +159,7 @@ class Car():
         for i in range(len(self.car_list)):
             if i != self.id:
                 i_waypoint = self.get_waypoint(self.car_list[i])
-                i_length = len(i_waypoint.next_until_lane_end())
+                i_length = len(i_waypoint.next_until_lane_end(0.5))
                 i_road_id = i_waypoint.road_id
                 i_lane_id = i_waypoint.lane_id
                 if i_road_id == road_id and i_lane_id == lane_id:
@@ -171,7 +179,8 @@ class Car():
         for i in range(len(self.car_list)):
             if i != self.id:
                 i_waypoint = self.get_waypoint(self.car_list[i])
-                i_length = len(i_waypoint.next_until_lane_end())
+                i_length = len(
+                    i_waypoint.next_until_lane_end( 0.5))
                 i_road_id = i_waypoint.road_id
                 i_lane_id = i_waypoint.lane_id
                 if i_road_id == road_id and i_lane_id == lane_id:
@@ -186,12 +195,12 @@ class Car():
 
     def get_next_vehicle(self):
         '''获得本车道前一辆车'''
-        my_length = len(self.waypoint.next_until_lane_end(0.5))
+        my_length = len(self.get_waypoint_list(self.waypoint, 0.5))
         return self.get_forward_vehicle(self.road_id, self.lane_id, my_length)
 
     def get_last_vehicle(self):
         '''获得本车道后一辆车'''
-        my_length = len(self.waypoint.next_until_lane_end(0.5))
+        my_length = len(self.get_waypoint_list(self.waypoint, 0.5))
         return self.get_back_vehicle(self.road_id, self.lane_id, my_length)
 
     def toggle_radar(self):

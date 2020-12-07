@@ -17,6 +17,8 @@ except IndexError:
 
 import carla
 from Car import Car
+from change_lane_model import Change_lane_model
+from follow_model import Follow_model
 
 IM_WIDTH = 1280
 IM_HEIGHT = 720
@@ -103,6 +105,20 @@ class Carla_Enviroment:
         print('生成失败次数：' + str(spawn_failed_count))
         print('\n')
 
+        # def change_lane_left(self, car):
+        #     cm = Change_lane_model(car)
+        #     if cm.lane_change_model_left(car.vehicle):
+        #         print('向左换道成功！')
+        #     else:
+        #         print('换道失败！')
+
+        # def change_lane_right(self, car):
+        #     cm = Change_lane_model(car)
+        #     if cm.lane_change_model_right(car.vehicle):
+        #         print('向右换道成功！')
+        #     else:
+        #         print('换道失败！')
+
     def Genratar_many_cars_near_specific_coordinate(self):
         count = eval(input('生成汽车数量:'))
 
@@ -130,7 +146,7 @@ class Carla_Enviroment:
             try:
                 car = random.choice(self.blueprint_library.filter('vehicle'))
                 car = self.world.spawn_actor(car, coordinate)
-                self.car_list.append(car)
+                # self.car_list.append(car)
                 self.actor_list.append(car)
                 new_car_list.append(car)
                 spawn_succeed_count += 1
@@ -139,14 +155,15 @@ class Carla_Enviroment:
                     break
             except:
                 spawn_failed_count += 1
-        random.shuffle(self.car_list)
+        random.shuffle(new_car_list)
 
         for vehicle in new_car_list:
             vehicle.set_autopilot(True)
-            car = Car(vehicle, self.world, self.car_list)
+            car = Car(vehicle, self.world, new_car_list)
+            self.car_list.append(car)
             # car_waypoint = self.world.get_map().get_waypoint(
             #     car.get_location())
-            car_waypoint = car.waypoint()
+            car_waypoint = car.waypoint
             car_lane_type = car_waypoint.lane_type
             print(str(car_lane_type))
             self.output_speed(car.velocity)

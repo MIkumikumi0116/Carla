@@ -25,6 +25,16 @@ class Change_lane_model(object):
         self.control = Car_control(car)
         self.lane_change = None
 
+    def Lane_change(self):
+        if self.lane_change_model_right(self.car.vehicle):
+            print("向右变道成功！")
+        else:
+            print("向右变道失败！")
+        if self.lane_change_model_left(self.car.vehicle):
+            print("向左变道成功！")
+        else:
+            print("向左变道失败！")
+
     def lane_change_model_left(self, vehicle):
         '''换道模型'''
         distance = self.car.get_waypoint_distance(vehicle, 0.5)
