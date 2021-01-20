@@ -1,6 +1,6 @@
 from sys import argv as SYS_argv
 from sys import exit as SYS_exit
-from Control_Panel_UI import Ui_MainWindow
+from Control_Panel_UI import Ui_Control_Panel_UI
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtGui import QIntValidator
 
@@ -247,7 +247,7 @@ class Setting_Panel(QMainWindow):
         print(4)
 
 
-class Main_Window(QMainWindow, Ui_MainWindow):
+class Main_Window(QMainWindow, Ui_Control_Panel_UI):
     def __init__(self):
         QMainWindow.__init__(self)
         self.setupUi(self)
@@ -273,6 +273,6 @@ class Main_Window(QMainWindow, Ui_MainWindow):
 
 if __name__ == '__main__':
     app = QApplication(SYS_argv)
-    mainWindow = Main_Window()
-    mainWindow.show()
+    main_window = Main_Window()
+    main_window.show()
     SYS_exit(app.exec_())
