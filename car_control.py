@@ -13,15 +13,15 @@ class Car_control():
         '''初始化，将world,car_list等参数传入'''
         self.world = car.world
         self.car = car
-        self.speed = car.get_speed()
-        self.acc = car.get_acclerometer()
-        self.car_list = self.car.car_list
-        self.waypoint = self.get_waypoint(self.car)
+        self.speed = car.get_speed(self.car.velocity)
+        self.acc = self.car.get_accelerometer()
+        self.vehicle_list = self.car.vehicle_list
+        self.waypoint = self.car.get_waypoint(self.car.vehicle)
         self.lane_change = self.waypoint.lane_change
-        self.lane_id = self.waypoint.lane_id
-        self.road_id = self.wyapoint.road_id
-        self.location = self.car.get_location()
-        self.id = self.get_self_car_id()
+        self.lane_id = self.car.lane_id
+        self.road_id = self.car.road_id
+        self.location = self.car.location
+        self.id = self.car.id
 
     def acc_control(self, target_acc):
         '''控制汽车加速度'''

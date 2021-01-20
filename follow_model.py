@@ -2,11 +2,11 @@
 import time
 import random
 import numpy as np
-import custom_car
 import carla
-from carla_enviroment import GlobeVar
+from globe import GlobeVar
 import sympy as sp
 import math
+from car_control import Car_control
 
 
 class Follow_model(object):
@@ -15,7 +15,9 @@ class Follow_model(object):
         self.car = car
         self.speed = car.get_speed(car.velocity)
         self.length = car.get_length()
-        self.acc = car.get_accelerometer()
+        self.acc = self.car.get_accelerometer()
+        self.control = Car_control(car)
+        self.iv = car.iv
 
     def is_in_follow_range(self, vehicle):
         '''判断是否在跟驰模型范围'''
@@ -31,7 +33,7 @@ class Follow_model(object):
             return False
 
     def follow_model_two(self, car, distance):
-        '''跟驰模型'''
+        '''传统车跟驰模型'''
         '''距离为主函数通过waypoint计算'''
         car_length = car.get_length()
         vb = self.speed
@@ -47,7 +49,7 @@ class Follow_model(object):
             pow(vf, 2) / a / 2, 1 + car_length)
         lam = 2 if d < 100 else 0
         acc = 0.41 * (v_p - vb) + lam * (1 - s_d / d)
-        
+        self.control.acc_control(acc)
         return acc
 
     def follow_model_one(self, car, car_acc, distance, T, alpha):
@@ -62,4 +64,22 @@ class Follow_model(object):
         a3 = alpha**2 * T * vx / (2 + alpha**2 * T * vx)
         acc = a1 * (vt - self.car.speed) + a2 * (abs(self.car.speed -
                                                      car.speed)) + a3 * car.acc
+        return acc
+
+    def idm_follow_model(self, car, distance):
+        '''智能车跟驰模型'''
+        car_length = car.get_length()
+        vb = self.speed
+        # 后车速度
+        vf = car.get_speed()
+        # 前车速度
+        d = distance
+        # 下面是公式转化部分
+        ss = 2 + vb * 1.2 + vb * (abs(vb - vf)) / (2 * pow(1.5 * 2, 0.5))
+        k = 1
+        if ss <= 0:
+            k = 0
+        acc = 1.5 * (1 - pow(vb / self.iv, 4) -
+                     k * pow(ss / (d - car_length), 2))
+        # self.control.acc_control(acc)
         return acc

@@ -6,6 +6,7 @@ import time
 import random
 import numpy as np
 import math
+from datetime import datetime
 
 try:
     sys.path.append(
@@ -119,6 +120,56 @@ class Carla_Enviroment:
         #     else:
         #         print('换道失败！')
 
+    def load_lane_change(self, car, index):
+        # 装载换道模型
+        cm = Change_lane_model(car)
+        if index == 1:
+            cm.launch_lane_change()
+        cm.launch_lane_change()
+
+    def load_idm_change_model(self, car):
+        FOLLOW_LIST = []
+        PFOLLOW_LIST = []
+        FOLLOW_LIST = self.get_follow_list(car, car.road_id, car.lane_id)
+        PFOLLOW_LIST = self.get_follow_list(car, car.road_id, car.lane_id - 1)
+        Acc_list = []
+        PAcc_list = []
+        bcar = self.get_car(car.last_vehicle)
+        pbcar = self.get_car(car.lb_vehicle)
+        bcar.next_vehicle = car.next_vehicle
+        pbcar.next_vehicle = car.vehicle
+        for ncar in FOLLOW_LIST:
+            # if ncar.location == car.last_vehicle.get_location():
+            #     continue
+            # else:
+            acc = self.load_follow_model(ncar, 1)
+            Acc_list.append((acc, ncar.get_accelerometer()))
+        for ncar in PFOLLOW_LIST:
+            # if ncar.location == car.last_vehicle.get_location():
+            #     continue
+            # else:
+            acc = self.load_follow_model(ncar, 1)
+            PAcc_list.append((acc, ncar.get_accelerometer()))
+        acc = self.load_follow_model(self.get_car(car.lf_vehicle), 1)
+        cm = Change_lane_model(car)
+        result = cm.idm_change_left((acc, car.get_accelerometer()), Acc_list,
+                                    PAcc_list)
+        if result is False:
+            bcar.next_vehicle = bcar.get_next_vehicle()
+            pbcar.next_vehicle = pbcar.get_next_vehicle()
+            car.next_vehicle = car.get_next_vehicle()
+        cm.control.lane_change(cm.lane_change)
+
+    def load_follow_model(self, car, index):
+        # 装载跟驰模型
+        fm = Follow_model(car)
+        distance = car.get_waypoint_distance(car.next_vehicle)
+        if index == 1:
+            next_car = self.get_foward_car(car)
+            acc = fm.idm_follow_model(next_car, distance)
+            return acc
+        fm.idm_follow_model(car)
+
     def Genratar_many_cars_near_specific_coordinate(self):
         count = eval(input('生成汽车数量:'))
 
@@ -159,10 +210,16 @@ class Carla_Enviroment:
 
         for vehicle in new_car_list:
             vehicle.set_autopilot(True)
-            car = Car(vehicle, self.world, new_car_list)
+            car = Car(vehicle, self.world)
             self.car_list.append(car)
+            # self.load_lane_change(car)
             # car_waypoint = self.world.get_map().get_waypoint(
             #     car.get_location())
+            random.seed(datetime.now())
+            if random.random() > 0.2:
+                car.iv = random.randint(17, 23)
+            else:
+                car.iv = random.randint(23, 33)
             car_waypoint = car.waypoint
             car_lane_type = car_waypoint.lane_type
             print(str(car_lane_type))
@@ -185,38 +242,73 @@ class Carla_Enviroment:
         self.car_list = []
         self.actor_list = []
 
-    def get_foward_car(self):
-        random.shuffle(self.car_list)
-        while True:
-            for i in range(len(self.car_list)):
-                i_waypoint = Carla_Enviroment.get_waypoint(
-                    self, self.car_list[i])
-                i_lane_id = i_waypoint.lane_id
-                i_road_id = i_waypoint.road_id
-                i_length = len(i_waypoint.next_until_lane_end(0.5))
-                min = 10000
-                index = 0
-                count = 1
-                for j in range(len(self.car_list)):
-                    j_waypoint = Carla_Enviroment.get_waypoint(
-                        self, self.car_list[j])
-                    j_length = len(j_waypoint.next_until_lane_end(0.5))
-                    if i_road_id == j_waypoint.road_id and j_waypoint.lane_id == i_lane_id and i != j:
-                        if i_length > j_length and abs(i_length -
-                                                       j_length) < min:
-                            min = abs(i_length - j_length)
-                            index = j
-                        count += 1
-                print(
-                    str(i_road_id) + '号道路的' + str(i_lane_id) + '号车道' +
-                    '共:{}辆车'.format(count))
-                if min != 10000:
-                    print('{}'.format(i) + '号车的前车是' + '{}'.format(index) +
-                          '号车')
-                    print('两车的距离为{}'.format(min * 2) + '米')
-                else:
-                    print('{}'.format(i) + '号车为该车道第一辆车')
-            time.sleep(0.3)
+    # def get_foward_car(self):
+    #     random.shuffle(self.car_list)
+    #     while True:
+    #         for i in range(len(self.car_list)):
+    #             i_waypoint = self.car_list[i].waypoint
+    #             i_lane_id = i_waypoint.lane_id
+    #             i_road_id = i_waypoint.road_id
+    #             i_length = len(i_waypoint.next_until_lane_end(0.5))
+    #             min = 10000
+    #             index = 0
+    #             count = 1
+    #             for j in range(len(self.car_list)):
+    #                 j_waypoint = Carla_Enviroment.get_waypoint(
+    #                     self, self.car_list[j])
+    #                 j_length = len(j_waypoint.next_until_lane_end(0.5))
+    #                 if i_road_id == j_waypoint.road_id and j_waypoint.lane_id == i_lane_id and i != j:
+    #                     if i_length > j_length and abs(i_length -
+    #                                                    j_length) < min:
+    #                         min = abs(i_length - j_length)
+    #                         index = j
+    #                     count += 1
+    #             print(
+    #                 str(i_road_id) + '号道路的' + str(i_lane_id) + '号车道' +
+    #                 '共:{}辆车'.format(count))
+    #             if min != 10000:
+    #                 print('{}'.format(i) + '号车的前车是' + '{}'.format(index) +
+    #                       '号车')
+    #                 print('两车的距离为{}'.format(min * 2) + '米')
+    #             else:
+    #                 print('{}'.format(i) + '号车为该车道第一辆车')
+    #         time.sleep(0.1)
+
+    def get_follow_list(self, vcar, road_id, lane_id):
+        Follw_list = []
+        for car in self.car_list:
+            if car.road_id == road_id:
+                if car.lane_id == lane_id:
+                    if len(car.get_waypoint_list(car.waypoint, 0.5)) > len(
+                            vcar.get_waypoint_list(vcar.waypoint, 0.5)):
+                        if car.get_waypoint_distance(vcar.vehicle, 0.5) < 300:
+                            Follw_list.append(car)
+        return Follw_list
+
+    # def get_foward_car(self,vcar):
+    #     road_id = vcar.road_id
+    #     lane_id = vcar.lane_id
+    #     fcar = None
+    #     minLength = vcar.get_waypoint_distance(None)
+    #     for car in self.car_list:
+    #         if car.road_id == road_id:
+    #             if car.lane_id == lane_id:
+    #                 if len(car.get_waypoint_list(car.waypoint, 0.5)) < len(
+    #                         vcar.get_waypoint_list(vcar.waypoint, 0.5)):
+    #                         if vcar.get_waypoint_distance(car.vehicle,0.5) < minLength:
+    #                             minLength = vcar.get_waypoint_distance(car.vehicle,0.5)
+    #                             fcar = car
+
+    def get_foward_car(self, vcar):
+        for car in self.car_list:
+            if car.vehicle.id == vcar.next_vehicle.id:
+                return car
+
+    def get_car(self, vehicle):
+        for car in self.car_list:
+            if car.location == vehicle.get_location():
+                return car
+        return None
 
     '''
     def get_waypoint_lane_id(self, car):
@@ -239,7 +331,7 @@ def main():
 
     while True:
         carla_Enviroment.Genratar_many_cars_near_specific_coordinate()
-        carla_Enviroment.get_foward_car()
+        # carla_Enviroment.get_foward_car()
 
 
 if __name__ == '__main__':
