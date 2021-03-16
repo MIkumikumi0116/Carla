@@ -1,0 +1,740 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OpenDRIVE>
+    <header revMajor="1" revMinor="4" name="" version="1" date="2021-03-15T20:29:14" north="-6.4759994506835938e+1" south="-4.8575810281167946e+2" east="-3.3900029046215572e+0" west="-1.3790040107893424e+2" vendor="MathWorks">
+        <userData>
+            <vectorScene program="RoadRunner" version="R2020b Update 3 (1.1.3.f626d0e01)"/>
+        </userData>
+    </header>
+    <road name="Road 0" length="2.6459186201206916e+2" id="0" junction="-1">
+        <link>
+            <predecessor elementType="junction" elementId="4"/>
+        </link>
+        <type s="0.0000000000000000e+0" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <type s="7.7230000000000004e+1" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <planView>
+            <geometry s="0.0000000000000000e+0" x="-2.4882125133628190e+1" y="-2.0113997852324570e+2" hdg="-1.5670466722843410e+0" length="2.6459186201206910e+2">
+                <line/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="7.1800000000000011e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="7.7230000000000004e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.0180000000000001e+2" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.6069000000000003e+2" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.9069000000000003e+2" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </elevationProfile>
+        <lateralProfile>
+            <superelevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <superelevation s="7.7230000000000004e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </lateralProfile>
+        <lanes>
+            <laneOffset s="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneOffset s="7.7230000000000004e+1" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneSection s="0.0000000000000000e+0" singleSide="false">
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <userData/>
+                    </lane>
+                </center>
+                <right>
+                    <lane id="-1" type="shoulder" level="false">
+                        <link>
+                            <successor id="-1"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{7a9699ba-2a35-410e-9d31-69e544e5a21e}" travelDir="undirected">
+                                <successor id="-1" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="-2" type="driving" level="false">
+                        <link>
+                            <successor id="-2"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="3.5000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="broken" material="standard" color="white" width="1.2500000000000000e-1" laneChange="both"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{b9199673-3a61-47bf-8638-048a8585e887}" travelDir="forward">
+                                <successor id="-2" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="-3" type="driving" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="3.4430653527480688e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="5.4170000000000009e+1" a="3.4430653527480688e+0" b="0.0000000000000000e+0" c="-1.9424413514283825e-2" d="5.6156153553870586e-4"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="broken" material="standard" color="white" width="1.2500000000000000e-1" laneChange="both"/>
+                        <roadMark sOffset="5.5660000000000004e+1" type="none" material="standard" color="white" laneChange="both"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{a0655939-272a-4cbf-8dc2-276de4fc0492}" travelDir="forward"/>
+                        </userData>
+                    </lane>
+                    <lane id="-4" type="driving" level="false">
+                        <link>
+                            <successor id="-3"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="3.4999999999999991e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="5.4170000000000009e+1" a="3.4999999999999991e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{7b88c135-e76a-4e97-a707-05a166b8c56e}" travelDir="forward">
+                                <successor id="-3" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="-5" type="shoulder" level="false">
+                        <link>
+                            <successor id="-4"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="5.4170000000000009e+1" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{8d184d68-9239-4bbe-84a7-2d5c6f1b9cf3}" travelDir="undirected">
+                                <successor id="-4" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                </right>
+                <userData>
+                    <vectorLaneSection>
+                        <carriageway rightBoundary="-5" leftBoundary="0"/>
+                    </vectorLaneSection>
+                </userData>
+            </laneSection>
+            <laneSection s="7.7230000000000004e+1" singleSide="false">
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <userData/>
+                    </lane>
+                </center>
+                <right>
+                    <lane id="-1" type="shoulder" level="false">
+                        <link>
+                            <predecessor id="-1"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{0e4440c0-4a4f-4674-9ccb-d8a402beec2d}" travelDir="undirected">
+                                <predecessor id="-1" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="-2" type="driving" level="false">
+                        <link>
+                            <predecessor id="-2"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="3.5000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="broken" material="standard" color="white" width="1.2500000000000000e-1" laneChange="both"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{8afa87c0-df4c-433f-a2d9-5858178a045c}" travelDir="forward">
+                                <predecessor id="-2" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="-3" type="driving" level="false">
+                        <link>
+                            <predecessor id="-4"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="3.5000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{deee2640-c832-4cba-8957-ad8da7181e7f}" travelDir="forward">
+                                <predecessor id="-4" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="-4" type="shoulder" level="false">
+                        <link>
+                            <predecessor id="-5"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{4cb53437-1221-4359-a0d6-72d042cbac0c}" travelDir="undirected">
+                                <predecessor id="-5" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                </right>
+                <userData>
+                    <vectorLaneSection>
+                        <carriageway rightBoundary="-4" leftBoundary="0"/>
+                    </vectorLaneSection>
+                </userData>
+            </laneSection>
+        </lanes>
+        <objects>
+            <object id="33" name="Bush_Sm01" s="2.7280942316778184e-1" t="4.6755397726896142e+0" zOffset="-2.1065256261068227e-1" hdg="-1.2391401529312134e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.1775490181695600e+0" width="3.2135186389694819e+0" length="3.3082989745462141e+0"/>
+            <object id="62" name="Eucalyptus_Sm01" s="2.8327527187225159e+0" t="-1.4893287014278073e+1" zOffset="-5.7794639599615916e-1" hdg="2.1017339229583740e+0" roll="-7.2218574583530426e-2" pitch="6.2865279614925385e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="47" name="Bush_Sm01" s="2.9485771242418712e+0" t="-3.6611845909588816e+1" zOffset="-1.3625264420249436e-1" hdg="-3.0393722057342529e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.3598799768797316e+0" width="3.4825935973282718e+0" length="3.5853100981225552e+0"/>
+            <object id="152" name="Eucalyptus_Sm01" s="3.2677405427785482e+0" t="2.5823146899828231e+0" zOffset="-5.9356155114588949e-1" hdg="2.8805649280548096e+0" roll="8.2054138183593750e-2" pitch="1.8511891365051270e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="63" name="Eucalyptus_Sm01" s="7.6333876184782579e+0" t="-1.4387516653172248e+1" zOffset="-3.0567298015548244e-1" hdg="6.1095762252807617e-1" roll="4.8361327499151230e-2" pitch="-1.8548017367720604e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="153" name="Eucalyptus_Sm01" s="8.4374800831207430e+0" t="2.6276022182677714e+0" zOffset="-3.0447459101668123e-1" hdg="3.0435318946838379e+0" roll="3.6622487008571625e-2" pitch="-5.8489316143095493e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="56" name="Bush_Sm01" s="1.1790961429074649e+1" t="1.2620385808844139e+1" zOffset="-1.7346150579107331e-1" hdg="1.9312869310379028e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2686728152539062e+0" width="3.3479944496677576e+0" length="3.4467410489874077e+0"/>
+            <object id="64" name="Eucalyptus_Sm01" s="1.2956144169752038e+1" t="-1.4199776837626708e+1" zOffset="-6.7103148936780410e-1" hdg="-1.8443694710731506e-1" roll="4.2167108505964279e-2" pitch="2.3749640211462975e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="154" name="Eucalyptus_Sm01" s="1.3074147231281934e+1" t="2.8864317920859968e+0" zOffset="-7.4622598152613928e-1" hdg="1.3582538366317749e+0" roll="-7.3727905750274658e-2" pitch="7.2673074901103973e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="65" name="Eucalyptus_Sm01" s="1.8291280127872891e+1" t="-1.4245094252609121e+1" zOffset="-5.3567379949614125e-1" hdg="-9.6634268760681152e-1" roll="2.2710220888257027e-2" pitch="5.2588578313589096e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="155" name="Eucalyptus_Sm01" s="1.8312107521587350e+1" t="3.3543069924370137e+0" zOffset="-7.0151613436720461e-1" hdg="-6.5248149633407593e-1" roll="-3.0579863116145134e-2" pitch="-7.8450977802276611e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="51" name="Bush_Sm01" s="2.1155563191397235e+1" t="-3.1534897419623416e+1" zOffset="-1.9702343329283784e-1" hdg="2.3341581821441650e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2109493284797916e+0" width="3.2628089262685798e+0" length="3.3590430421079280e+0"/>
+            <object id="66" name="Eucalyptus_Sm01" s="2.3076237652730111e+1" t="-1.4328650867605447e+1" zOffset="-4.5452744194181338e-1" hdg="-2.1574461460113525e-1" roll="-3.4335605800151825e-2" pitch="1.2886405922472477e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="156" name="Eucalyptus_Sm01" s="2.3839382772200878e+1" t="3.0404123422769835e+0" zOffset="-2.9638839122481370e-1" hdg="-2.1382181644439697e+0" roll="8.5241362452507019e-2" pitch="7.7912479639053345e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="67" name="Eucalyptus_Sm01" s="2.7964606775310049e+1" t="-1.4854720006238580e+1" zOffset="-4.6507718987985835e-1" hdg="1.1578154563903809e+0" roll="-5.3202386945486069e-2" pitch="-6.6817387938499451e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="157" name="Eucalyptus_Sm01" s="2.8285114342957538e+1" t="2.7764179182917843e+0" zOffset="-3.0235461290941451e-1" hdg="1.7829264402389526e+0" roll="-7.7165417373180389e-2" pitch="4.3978031724691391e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="68" name="Eucalyptus_Sm01" s="3.3595005245538893e+1" t="-1.4664852379693272e+1" zOffset="-7.3896397562126415e-1" hdg="-1.6394791603088379e+0" roll="-6.6984631121158600e-2" pitch="5.6268904358148575e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="158" name="Eucalyptus_Sm01" s="3.3953731631409674e+1" t="3.1650860724546241e+0" zOffset="-6.7672596636835924e-1" hdg="-2.0779705047607422e+0" roll="3.5653211176395416e-2" pitch="-6.3479527831077576e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="69" name="Eucalyptus_Sm01" s="3.8801374753709027e+1" t="-1.4949287988045803e+1" zOffset="-6.9130404903066578e-1" hdg="-2.3781871795654297e+0" roll="5.7874199002981186e-2" pitch="-4.3839693535119295e-4" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="159" name="Eucalyptus_Sm01" s="3.8985992838122385e+1" t="3.2359342980221228e+0" zOffset="-4.4366266179768032e-1" hdg="-1.9202741384506226e+0" roll="-6.0641147196292877e-2" pitch="-1.1326194508001208e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="70" name="Eucalyptus_Sm01" s="4.3226387421137481e+1" t="-1.4681836947474913e+1" zOffset="-4.0084264864483632e-1" hdg="2.9977658390998840e-1" roll="1.9589170813560486e-2" pitch="2.9591476544737816e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="160" name="Eucalyptus_Sm01" s="4.3696830645205047e+1" t="2.7853686457812472e+0" zOffset="-4.4718691170914882e-1" hdg="2.3001699447631836e+0" roll="-6.4651116728782654e-2" pitch="-2.7378553524613380e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="71" name="Eucalyptus_Sm01" s="4.8718516674310301e+1" t="-1.5210239177140402e+1" zOffset="-6.5002749213794553e-1" hdg="2.8068959712982178e+0" roll="1.4698759187012911e-3" pitch="-2.2015368565917015e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="161" name="Eucalyptus_Sm01" s="4.9188432671929668e+1" t="3.1979469608061954e+0" zOffset="-6.8664422066699815e-1" hdg="-2.2212541103363037e+0" roll="4.2655780911445618e-2" pitch="-8.6501307785511017e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="72" name="Eucalyptus_Sm01" s="5.3423004027962556e+1" t="-1.4510738188026593e+1" zOffset="-2.9382075688688353e-1" hdg="3.5413693636655807e-2" roll="-1.1184141039848328e-2" pitch="1.8406873568892479e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="162" name="Eucalyptus_Sm01" s="5.3873851270881346e+1" t="2.7826501235271586e+0" zOffset="-2.9827939227775951e-1" hdg="2.4927668571472168e+0" roll="6.8861998617649078e-2" pitch="-1.8155792728066444e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="73" name="Eucalyptus_Sm01" s="5.9029601027006741e+1" t="-1.4800014951986260e+1" zOffset="-6.9224118289801806e-1" hdg="-2.5792205333709717e+0" roll="3.8654100149869919e-2" pitch="5.6485325098037720e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="163" name="Eucalyptus_Sm01" s="5.9278499043521983e+1" t="3.4241473960415867e+0" zOffset="-5.4361794965287558e-1" hdg="-1.6533738374710083e+0" roll="7.2781607508659363e-2" pitch="-4.2253334075212479e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="55" name="Bush_Sm01" s="6.2773486814350406e+1" t="1.5920847680333011e+1" zOffset="-1.2210264029770154e-1" hdg="2.9369363784790039e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.3945357375767653e+0" width="3.5337367030516553e+0" length="3.6379616316061250e+0"/>
+            <object id="74" name="Eucalyptus_Sm01" s="6.3843050261584573e+1" t="-1.4161728907373803e+1" zOffset="-7.0177672629574006e-1" hdg="2.6968712806701660e+0" roll="-1.6504136845469475e-2" pitch="-3.7973251193761826e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="164" name="Eucalyptus_Sm01" s="6.4312367420548654e+1" t="3.0566386433407651e+0" zOffset="-5.5404856261501789e-1" hdg="-2.7428956031799316e+0" roll="1.1674996465444565e-2" pitch="2.9433142393827438e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="75" name="Eucalyptus_Sm01" s="6.8469242128830658e+1" t="-1.2959745836183991e+1" zOffset="-4.4304503040271281e-1" hdg="1.7561595439910889e+0" roll="-6.8865343928337097e-2" pitch="-7.6734595000743866e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="165" name="Eucalyptus_Sm01" s="6.9322990017096842e+1" t="3.5631745596280453e+0" zOffset="-2.8925779998531403e-1" hdg="-1.3112511634826660e+0" roll="-2.8294926509261131e-2" pitch="4.8331167548894882e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="76" name="Eucalyptus_Sm01" s="7.3449597962968198e+1" t="-1.2260723522880205e+1" zOffset="-4.9958404581189331e-1" hdg="1.7340710163116455e+0" roll="1.7238756641745567e-2" pitch="-4.8487246036529541e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="166" name="Eucalyptus_Sm01" s="7.4408929521941886e+1" t="3.5716384368056389e+0" zOffset="-5.1459710512171453e-1" hdg="-1.2664711475372314e+0" roll="7.8912496566772461e-2" pitch="4.3419454246759415e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="77" name="Eucalyptus_Sm01" s="7.9148705961014414e+1" t="-1.1875508592158063e+1" zOffset="-2.8190283173913316e-1" hdg="-2.3017230033874512e+0" roll="-2.7029406279325485e-2" pitch="1.8560748547315598e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="167" name="Eucalyptus_Sm01" s="7.9255804589881393e+1" t="2.9405243961259409e+0" zOffset="-3.1891794795366474e-1" hdg="2.5563142299652100e+0" roll="-9.9363401532173157e-3" pitch="4.4481132179498672e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="168" name="Eucalyptus_Sm01" s="8.4192799286252495e+1" t="3.0062129416148657e+0" zOffset="-6.5039950260140322e-1" hdg="2.2298419475555420e+0" roll="5.1641803234815598e-2" pitch="1.3794955797493458e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="78" name="Eucalyptus_Sm01" s="8.4194510493756724e+1" t="-1.1716759956983502e+1" zOffset="-5.5118073954129698e-1" hdg="-2.1472432613372803e+0" roll="2.6655917987227440e-2" pitch="8.9436313137412071e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="169" name="Eucalyptus_Sm01" s="8.9111373520087000e+1" t="3.0894389673691940e+0" zOffset="-3.6153065939848522e-1" hdg="1.7264221906661987e+0" roll="2.7493581175804138e-2" pitch="-4.2574424296617508e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="79" name="Eucalyptus_Sm01" s="8.9257947925174520e+1" t="-1.1583411983888084e+1" zOffset="-3.5600053190812847e-1" hdg="-2.1005806922912598e+0" roll="-7.7156431972980499e-2" pitch="6.1619561165571213e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="80" name="Eucalyptus_Sm01" s="9.4374527569282080e+1" t="-1.1626683068348910e+1" zOffset="-2.7287274740612183e-1" hdg="-2.5059845447540283e+0" roll="-1.1231323704123497e-2" pitch="-8.4588989615440369e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="170" name="Eucalyptus_Sm01" s="9.4395579259693633e+1" t="3.0908705311606539e+0" zOffset="-6.9608856339759961e-1" hdg="2.4500546455383301e+0" roll="1.4754837378859520e-2" pitch="7.3319368064403534e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="81" name="Eucalyptus_Sm01" s="9.9212593900244642e+1" t="-1.1165441925516014e+1" zOffset="-5.1518552426159736e-1" hdg="-1.1711670160293579e+0" roll="-4.7153551131486893e-2" pitch="3.5921733826398849e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="171" name="Eucalyptus_Sm01" s="9.9238179470274318e+1" t="3.6042611669745526e+0" zOffset="-4.2008933294485329e-1" hdg="3.1782314181327820e-1" roll="-7.9885363578796387e-2" pitch="4.8919260501861572e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="82" name="Eucalyptus_Sm01" s="1.0385343179847715e+2" t="-1.1665445545422546e+1" zOffset="-3.2238932229416756e-1" hdg="1.6941370964050293e+0" roll="1.7245179042220116e-2" pitch="-3.9581689983606339e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="172" name="Eucalyptus_Sm01" s="1.0488288329887492e+2" t="3.2634079520271122e+0" zOffset="-5.0198039184160137e-1" hdg="-2.8326599597930908e+0" roll="-3.6506891250610352e-2" pitch="4.0523745119571686e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="83" name="Eucalyptus_Sm01" s="1.0888703150757266e+2" t="-1.1321655375641413e+1" zOffset="-5.6060187052217392e-1" hdg="8.5099714994430542e-1" roll="-8.5951320827007294e-2" pitch="9.1312490403652191e-3" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="173" name="Eucalyptus_Sm01" s="1.0935058815257307e+2" t="3.6305721830402717e+0" zOffset="-3.7877449129582030e-1" hdg="4.5133194327354431e-1" roll="-5.9988059103488922e-2" pitch="5.5451486259698868e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="84" name="Eucalyptus_Sm01" s="1.1429042859490688e+2" t="-1.0988559780811489e+1" zOffset="-7.3327749393974206e-1" hdg="-7.9727542400360107e-1" roll="-7.9613007605075836e-2" pitch="3.3514335751533508e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="174" name="Eucalyptus_Sm01" s="1.1456229860960529e+2" t="3.2231214810481958e+0" zOffset="-5.1949062983913918e-1" hdg="1.8886405229568481e+0" roll="-5.4688300937414169e-2" pitch="2.0633060485124588e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="85" name="Eucalyptus_Sm01" s="1.1961436661557939e+2" t="-1.0934416420397024e+1" zOffset="-6.1299430779897779e-1" hdg="-1.5232405662536621e+0" roll="2.7898412197828293e-2" pitch="-7.6206669211387634e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="175" name="Eucalyptus_Sm01" s="1.1961997634366989e+2" t="3.2055558914538871e+0" zOffset="-5.1722114159905297e-1" hdg="1.8768353462219238e+0" roll="4.8927572788670659e-4" pitch="-6.4714424312114716e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="86" name="Eucalyptus_Sm01" s="1.2474556835189364e+2" t="-1.1297377672380264e+1" zOffset="-4.3146816342770389e-1" hdg="-2.6806991100311279e+0" roll="-4.4063080102205276e-2" pitch="-5.5974139831960201e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="176" name="Eucalyptus_Sm01" s="1.2494864122554095e+2" t="3.2277743948333288e+0" zOffset="-4.0845120593148365e-1" hdg="2.6965591907501221e+0" roll="-7.4521459639072418e-2" pitch="7.9497613012790680e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="87" name="Eucalyptus_Sm01" s="1.2969360443926922e+2" t="-1.1367516945570891e+1" zOffset="-6.0575549421750974e-1" hdg="3.0210683345794678e+0" roll="-7.7959127724170685e-2" pitch="-3.2646816223859787e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="177" name="Eucalyptus_Sm01" s="1.3023854508106700e+2" t="3.5987411055819365e+0" zOffset="-7.1337650444845868e-1" hdg="-2.0881800651550293e+0" roll="-2.2912552580237389e-2" pitch="6.7596420645713806e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="178" name="Eucalyptus_Sm01" s="1.3464885774322772e+2" t="3.6742175944643769e+0" zOffset="-2.9369571380193443e-1" hdg="6.9239455461502075e-1" roll="-6.9195725023746490e-2" pitch="-2.4879360571503639e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="88" name="Eucalyptus_Sm01" s="1.3473955569518651e+2" t="-1.0801127958913536e+1" zOffset="-5.9434464191067871e-1" hdg="-1.4018920660018921e+0" roll="-8.5716210305690765e-2" pitch="-6.2910310924053192e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="89" name="Eucalyptus_Sm01" s="1.3948263559057372e+2" t="-1.0717927240448361e+1" zOffset="-6.9556870275012794e-1" hdg="-2.1701405942440033e-1" roll="5.6021519005298615e-2" pitch="-3.2136272639036179e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="179" name="Eucalyptus_Sm01" s="1.4043058954943464e+2" t="3.4097210099097737e+0" zOffset="-2.6449743597157166e-1" hdg="-2.7922973632812500e+0" roll="8.2061424851417542e-2" pitch="1.6320362687110901e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="180" name="Eucalyptus_Sm01" s="1.4484429629929187e+2" t="3.7639960948219056e+0" zOffset="-5.4212228539117679e-1" hdg="5.2116388082504272e-1" roll="-5.9023208916187286e-2" pitch="-2.6765914633870125e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="90" name="Eucalyptus_Sm01" s="1.4485665902453155e+2" t="-1.0704208100433320e+1" zOffset="-5.8084386346504180e-1" hdg="-1.2486653327941895e+0" roll="-5.0346519798040390e-2" pitch="-8.4370531141757965e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="91" name="Eucalyptus_Sm01" s="1.4993344132634940e+2" t="-1.0639227562383240e+1" zOffset="-2.9343075330515583e-1" hdg="-1.0976557731628418e+0" roll="-1.4157438650727272e-2" pitch="-6.1771102249622345e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="181" name="Eucalyptus_Sm01" s="1.5052610877689602e+2" t="3.9615885004803886e+0" zOffset="-5.2293466039406533e-1" hdg="-1.5407441854476929e+0" roll="3.7440780550241470e-2" pitch="-7.8928858041763306e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="92" name="Eucalyptus_Sm01" s="1.5458597580090296e+2" t="-1.1263270957275608e+1" zOffset="-3.2539603848754289e-1" hdg="1.7215389013290405e+0" roll="2.1711707115173340e-2" pitch="1.1004464700818062e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="182" name="Eucalyptus_Sm01" s="1.5562404926731915e+2" t="3.7624079250461300e+0" zOffset="-5.3213715886656254e-1" hdg="-2.1268396377563477e+0" roll="-6.8706721067428589e-2" pitch="4.0957760065793991e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="183" name="Eucalyptus_Sm01" s="1.5999893526705722e+2" t="3.7174634295091771e+0" zOffset="-5.2515486140995360e-1" hdg="1.0231482982635498e+0" roll="6.6407866775989532e-2" pitch="-2.1902598440647125e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="93" name="Eucalyptus_Sm01" s="1.6026192541842096e+2" t="-1.0908157712751798e+1" zOffset="-5.0575788171705438e-1" hdg="-2.0608134269714355e+0" roll="-3.4648038446903229e-2" pitch="2.3340636864304543e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="94" name="Eucalyptus_Sm01" s="1.6464360892950472e+2" t="-1.1116506598341999e+1" zOffset="-2.9386721320667236e-1" hdg="1.3199712038040161e+0" roll="7.0430119521915913e-3" pitch="-2.8121892362833023e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="184" name="Eucalyptus_Sm01" s="1.6538495325878375e+2" t="4.1746536187714369e+0" zOffset="-3.1231078110255200e-1" hdg="-5.0160807371139526e-1" roll="4.0233928710222244e-2" pitch="-4.6517353504896164e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="95" name="Eucalyptus_Sm01" s="1.7027499957675732e+2" t="-1.1237924492664675e+1" zOffset="-5.0014025908640647e-1" hdg="-3.0973224639892578e+0" roll="5.4842390120029449e-2" pitch="6.7805379629135132e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="185" name="Eucalyptus_Sm01" s="1.7040627238830498e+2" t="3.4434536614168891e+0" zOffset="-3.8653328349055716e-1" hdg="2.1553249359130859e+0" roll="1.8213517963886261e-2" pitch="-1.5895893797278404e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="96" name="Eucalyptus_Sm01" s="1.7476253878532600e+2" t="-1.0843476605224314e+1" zOffset="-3.1705668222308642e-1" hdg="7.6201117038726807e-1" roll="6.8212866783142090e-2" pitch="3.6529704928398132e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="186" name="Eucalyptus_Sm01" s="1.7580917798713216e+2" t="4.1235356920111776e+0" zOffset="-3.8848420797361205e-1" hdg="-1.3027585744857788e+0" roll="-4.5296493917703629e-2" pitch="3.0253946781158447e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="187" name="Eucalyptus_Sm01" s="1.8045706843027853e+2" t="3.5814591473880135e+0" zOffset="-4.6874529567092693e-1" hdg="1.7876077890396118e+0" roll="-3.6772780120372772e-2" pitch="-1.2825676240026951e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="97" name="Eucalyptus_Sm01" s="1.8048832037958621e+2" t="-1.0800471281311005e+1" zOffset="-6.7480562443687242e-1" hdg="-1.8503183126449585e+0" roll="-5.4053477942943573e-2" pitch="4.5104198157787323e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="54" name="Bush_Sm01" s="1.8216285145462939e+2" t="2.6526104595725990e+1" zOffset="-1.5681686737317521e-1" hdg="-2.3551669120788574e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.3094817986697436e+0" width="3.4082181565046508e+0" length="3.5087410091419122e+0"/>
+            <object id="98" name="Eucalyptus_Sm01" s="1.8514140658271720e+2" t="-1.1185964923214918e+1" zOffset="-5.0168544281812444e-1" hdg="1.9706008434295654e+0" roll="-5.5058892816305161e-2" pitch="2.2143410518765450e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="188" name="Eucalyptus_Sm01" s="1.8599020767350424e+2" t="4.0785338213113640e+0" zOffset="-5.3546308010546040e-1" hdg="-1.5452618598937988e+0" roll="-5.1740642637014389e-2" pitch="7.9677678644657135e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="99" name="Eucalyptus_Sm01" s="1.9063258722808874e+2" t="-1.0627586902970545e+1" zOffset="-5.4727881766152986e-1" hdg="-1.3793987035751343e+0" roll="5.7876273989677429e-2" pitch="4.2469490319490433e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="189" name="Eucalyptus_Sm01" s="1.9072114799729832e+2" t="3.5486711555433601e+0" zOffset="-3.6879347176910787e-1" hdg="2.3226137161254883e+0" roll="6.9402568042278290e-2" pitch="5.9561803936958313e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="100" name="Eucalyptus_Sm01" s="1.9533725817787081e+2" t="-1.0551180084825745e+1" zOffset="-6.1294778515480564e-1" hdg="-1.8984429538249969e-1" roll="1.3230446726083755e-2" pitch="8.5673935711383820e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="190" name="Eucalyptus_Sm01" s="1.9604366186931688e+2" t="4.2084533616598954e+0" zOffset="-6.3557192450758249e-1" hdg="-1.2424772977828979e+0" roll="-5.4271303117275238e-2" pitch="2.7338666841387749e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="101" name="Eucalyptus_Sm01" s="2.0052780998331568e+2" t="-1.0450888513078358e+1" zOffset="-4.8547260141206772e-1" hdg="-7.7098870277404785e-1" roll="2.3431677836924791e-3" pitch="-6.9735758006572723e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="191" name="Eucalyptus_Sm01" s="2.0111315451129880e+2" t="4.2959677012341189e+0" zOffset="-4.3092632211365911e-1" hdg="-1.0586680173873901e+0" roll="-1.0257137473672628e-3" pitch="7.0395886898040771e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="102" name="Eucalyptus_Sm01" s="2.0560042939135744e+2" t="-1.1054963865336404e+1" zOffset="-7.1153555569977101e-1" hdg="2.5794081687927246e+0" roll="-7.7808961272239685e-2" pitch="8.6097210645675659e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="192" name="Eucalyptus_Sm01" s="2.0602231695323979e+2" t="3.6787017211960276e+0" zOffset="-5.0549406690450682e-1" hdg="2.5241966247558594e+0" roll="-1.8966782838106155e-2" pitch="7.2936013340950012e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="103" name="Eucalyptus_Sm01" s="2.1044439524321439e+2" t="-1.0471417504900437e+1" zOffset="-3.0724189812194863e-1" hdg="-2.2088272497057915e-2" roll="-1.2516494840383530e-2" pitch="6.0732260346412659e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="193" name="Eucalyptus_Sm01" s="2.1108474309252867e+2" t="3.6538792248930108e+0" zOffset="-3.2759502517906153e-1" hdg="2.4259707927703857e+0" roll="-2.5681946426630020e-3" pitch="-1.1418700218200684e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="104" name="Eucalyptus_Sm01" s="2.1561781091255762e+2" t="-1.0433564076660744e+1" zOffset="-4.4499579042935744e-1" hdg="-3.0616170167922974e-1" roll="-3.7911366671323776e-2" pitch="4.7057751566171646e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="194" name="Eucalyptus_Sm01" s="2.1597879425718992e+2" t="3.8137914752907704e+0" zOffset="-5.5160900672460167e-1" hdg="1.8475378751754761e+0" roll="-3.9627172052860260e-2" pitch="4.7956079244613647e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="195" name="Eucalyptus_Sm01" s="2.2088749146816201e+2" t="3.9870824118341126e+0" zOffset="-3.1141649940580990e-1" hdg="1.1989580392837524e+0" roll="-4.7390770167112350e-2" pitch="2.5536572560667992e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="105" name="Eucalyptus_Sm01" s="2.2119260116761433e+2" t="-1.0829755380302647e+1" zOffset="-3.3982586658786212e-1" hdg="-2.4349002838134766e+0" roll="5.6406386196613312e-2" pitch="-6.3068042509257793e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="106" name="Eucalyptus_Sm01" s="2.2620379747011305e+2" t="-1.0612491819182861e+1" zOffset="-5.2738352715565717e-1" hdg="-1.8699882030487061e+0" roll="-9.1106053441762924e-3" pitch="1.1087146587669849e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="196" name="Eucalyptus_Sm01" s="2.2653686946862243e+2" t="3.8497928466216749e+0" zOffset="-4.4364973143297692e-1" hdg="-3.1272938251495361e+0" roll="-1.7922559753060341e-2" pitch="2.2894723340868950e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="107" name="Eucalyptus_Sm01" s="2.3103307641122507e+2" t="-1.0362876914495750e+1" zOffset="-3.8501994404692430e-1" hdg="-9.0943115949630737e-1" roll="-5.7826703414320946e-3" pitch="-3.4547794610261917e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="197" name="Eucalyptus_Sm01" s="2.3114795904864644e+2" t="3.8688127762466600e+0" zOffset="-4.8800669445254818e-1" hdg="1.8416492938995361e+0" roll="5.4977379739284515e-2" pitch="1.2259759008884430e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="108" name="Eucalyptus_Sm01" s="2.3576555830961163e+2" t="-1.0494968524928503e+1" zOffset="-3.7572614476556987e-1" hdg="2.0171006023883820e-1" roll="-1.4347221702337265e-2" pitch="7.9525113105773926e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="198" name="Eucalyptus_Sm01" s="2.3612489089774238e+2" t="4.3541983870675232e+0" zOffset="-5.9548235362321955e-1" hdg="4.9541509151458740e-1" roll="6.2810383737087250e-2" pitch="-8.9057218283414841e-3" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="199" name="Eucalyptus_Sm01" s="2.4119165642784202e+2" t="4.0575908119900888e+0" zOffset="-3.3348235227029205e-1" hdg="1.3594688177108765e+0" roll="-1.2871907092630863e-2" pitch="2.8263092041015625e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="109" name="Eucalyptus_Sm01" s="2.4120792354476316e+2" t="-1.0391558772670084e+1" zOffset="-4.8574255813266232e-1" hdg="-1.0058268308639526e+0" roll="1.0078599676489830e-2" pitch="-5.4344549775123596e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="110" name="Eucalyptus_Sm01" s="2.4637180274403005e+2" t="-1.1043647146887871e+1" zOffset="-6.6620607982137192e-1" hdg="3.0097711086273193e+0" roll="-3.2130483537912369e-2" pitch="-4.2932368814945221e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="200" name="Eucalyptus_Sm01" s="2.4693410579242516e+2" t="4.1406429268061515e+0" zOffset="-6.3934213922431782e-1" hdg="-2.6241824626922607e+0" roll="-9.1250417754054070e-3" pitch="-4.3056089431047440e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="111" name="Eucalyptus_Sm01" s="2.5141185415618986e+2" t="-1.0528220086183733e+1" zOffset="-7.1471460531759445e-1" hdg="-1.3755451440811157e+0" roll="-5.4234314709901810e-2" pitch="-5.2375368773937225e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="201" name="Eucalyptus_Sm01" s="2.5176310858577352e+2" t="4.6369867976646582e+0" zOffset="-4.7649053531494523e-1" hdg="-9.0305048227310181e-1" roll="1.6547583043575287e-2" pitch="-8.2388129085302353e-3" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="112" name="Eucalyptus_Sm01" s="2.5673588112495838e+2" t="-1.0813014655125954e+1" zOffset="-2.3197373274647942e-1" hdg="-2.1944813728332520e+0" roll="6.7628495395183563e-2" pitch="-8.2972660660743713e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="202" name="Eucalyptus_Sm01" s="2.5687781210662348e+2" t="3.9840958689513677e+0" zOffset="-4.4074710380453597e-1" hdg="2.8625581264495850e+0" roll="-3.0282976105809212e-2" pitch="2.7176013216376305e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="113" name="Eucalyptus_Sm01" s="2.6103100188405961e+2" t="-1.1013345652802354e+1" zOffset="-3.3517889987192534e-1" hdg="1.3651201725006104e+0" roll="6.9665782153606415e-2" pitch="8.6597010493278503e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="203" name="Eucalyptus_Sm01" s="2.6153257177065501e+2" t="4.1660430522260974e+0" zOffset="-5.8667645840156968e-1" hdg="1.3162386417388916e+0" roll="-6.7398607730865479e-2" pitch="-4.7988437116146088e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+        </objects>
+    </road>
+    <road name="Road 2" length="1.2712760414227441e+2" id="2" junction="-1">
+        <link>
+            <predecessor elementType="junction" elementId="4"/>
+        </link>
+        <type s="0.0000000000000000e+0" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <planView>
+            <geometry s="0.0000000000000000e+0" x="-3.4402049675605568e+1" y="-1.7504031265891743e+2" hdg="1.7800941685309271e+0" length="1.0666519644534227e+2">
+                <arc curvature="8.4918793537299125e-3"/>
+            </geometry>
+            <geometry s="1.0666519644534227e+2" x="-9.7765717565949785e+1" y="-9.3765554002475739e+1" hdg="2.6858821479866748e+0" length="2.0462407696932132e+1">
+                <line/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.1234735339098798e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="4.1234735339098798e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="6.1684735339098800e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="9.1684735339098808e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </elevationProfile>
+        <lateralProfile>
+            <superelevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </lateralProfile>
+        <lanes>
+            <laneOffset s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneSection s="0.0000000000000000e+0" singleSide="false">
+                <left>
+                    <lane id="2" type="shoulder" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{c3b4847c-45bc-47e7-8d11-cb5dba43f2ef}" travelDir="undirected"/>
+                        </userData>
+                    </lane>
+                    <lane id="1" type="driving" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="3.4999999999999991e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{554e0f23-1402-4eb9-a347-5b580f1018c4}" travelDir="backward"/>
+                        </userData>
+                    </lane>
+                </left>
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <roadMark sOffset="1.2685473533909877e+2" type="none" material="standard" color="white" laneChange="none"/>
+                        <userData/>
+                    </lane>
+                </center>
+                <userData>
+                    <vectorLaneSection>
+                        <carriageway rightBoundary="0" leftBoundary="2"/>
+                    </vectorLaneSection>
+                </userData>
+            </laneSection>
+        </lanes>
+        <objects>
+            <object id="22" name="Signal_MastArm_25ft" s="2.0881395841513091e+0" t="3.2277571373470266e+0" zOffset="7.8045196954347613e+0" hdg="1.2203576415777206e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="-1" height="1.3041027927398683e+0" width="7.7636588639757198e+0" length="2.5400214087071038e-1"/>
+            <object id="21" name="Signal_Post_30ft" s="2.5628993949503527e+0" t="-6.4919980148749801e-1" zOffset="-4.8583259582519567e-1" hdg="-2.3106168210506439e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="-1" height="9.6998688507080075e+0" width="5.5881871340427047e-1" length="5.5881882784517845e-1"/>
+            <object id="137" name="Eucalyptus_Sm01" s="3.0982885459809104e+0" t="7.0564711040077270e+0" zOffset="-6.6465271351459121e-1" hdg="-6.9907122850418091e-1" roll="-1.3048740103840828e-2" pitch="-6.3411980867385864e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="25" name="Bush_Sm01" s="4.9125634082893805e+0" t="5.1475221820080463e+0" zOffset="-1.4454254417020329e-1" hdg="-1.1952989101409912e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.3395619449701077e+0" width="3.4526090917767487e+0" length="3.5544412219425836e+0"/>
+            <object id="16" name="Bush_Sm01" s="6.5166049920229590e+0" t="-2.3154215544174690e+0" zOffset="-1.5529223222464128e-1" hdg="-1.5836021900177002e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.3132181552544777e+0" width="3.4137321745082168e+0" length="3.5144176589940743e+0"/>
+            <object id="26" name="Bush_Sm01" s="7.1058209574079800e+0" t="4.8850228628176922e+0" zOffset="-2.3347102404961073e-1" hdg="1.1807820796966553e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.1216288140913440e+0" width="3.1309941605409541e+0" length="3.2233404981741551e+0"/>
+            <object id="27" name="Bush_Sm01" s="7.7370474252891945e+0" t="5.1229777356122952e+0" zOffset="-1.8360174724813028e-1" hdg="-3.1019265651702881e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2438412666458487e+0" width="3.3113493911759067e+0" length="3.4090151718256516e+0"/>
+            <object id="136" name="Eucalyptus_Sm01" s="8.5616232609446286e+0" t="6.8959225392065093e+0" zOffset="-2.7799270853110380e-1" hdg="-6.9352525472640991e-1" roll="7.7102649956941605e-3" pitch="-1.4508335851132870e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="28" name="Bush_Sm01" s="9.0096137909544911e+0" t="-1.0584956580213003e+0" zOffset="-1.1375030695871388e-1" hdg="-2.8296296596527100e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.4150231321101723e+0" width="3.5639710678413876e+0" length="3.6690877364361887e+0"/>
+            <object id="17" name="Bush_Sm01" s="1.1237798804194675e+1" t="-2.6431336177785028e+0" zOffset="-1.4253909109077190e-1" hdg="7.6206821203231812e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.3444717196875127e+0" width="3.4598547574220788e+0" length="3.5619005930922207e+0"/>
+            <object id="29" name="Bush_Sm01" s="1.1355004201095543e+1" t="-1.0768059190185255e+0" zOffset="-2.4077669361074239e-1" hdg="-5.4701781272888184e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.1037251296610897e+0" width="3.1045728244981459e+0" length="3.1961398845301048e+0"/>
+            <object id="42" name="Bush_Sm01" s="1.1614812221230066e+1" t="1.3829170748152251e+1" zOffset="-2.8887297050185107e-1" hdg="-5.9212988615036011e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="1.9858576903356322e+0" width="2.9306300056431400e+0" length="3.0170667519615533e+0"/>
+            <object id="24" name="Bush_Sm01" s="1.2459358438419695e+1" t="5.3182404077017082e+0" zOffset="-1.6537619887052268e-1" hdg="2.5476105213165283e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2885058198384889e+0" width="3.3772630169789086e+0" length="3.4768728708625622e+0"/>
+            <object id="135" name="Eucalyptus_Sm01" s="1.4375656471629544e+1" t="6.3292922002474938e+0" zOffset="-3.1226403760039689e-1" hdg="-2.1771821975708008e+0" roll="-1.0413185693323612e-2" pitch="8.4637001156806946e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="41" name="Bush_Sm01" s="1.6557361464079516e+1" t="-5.9409308250896657e+0" zOffset="-1.3123967901005118e-1" hdg="1.8093652725219727e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.3721626939983307e+0" width="3.5007197035027544e+0" length="3.6039708202799927e+0"/>
+            <object id="134" name="Eucalyptus_Sm01" s="1.9040634885029569e+1" t="6.0888077174041655e+0" zOffset="-4.0689686487952947e-1" hdg="1.2360631227493286e+0" roll="3.5737622529268265e-2" pitch="7.1837678551673889e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="39" name="Bush_Sm01" s="1.9043690330685909e+1" t="5.3296691481640295e+0" zOffset="-1.6075885598003734e-1" hdg="2.1176249980926514e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2998213398364560e+0" width="3.3939618935876896e+0" length="3.4940642683827026e+0"/>
+            <object id="40" name="Bush_Sm01" s="2.1590434752677208e+1" t="4.9010845915569234e+0" zOffset="-1.8608466082132144e-1" hdg="-1.0057635307312012e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.2377564990951080e+0" width="3.3023696501810118e+0" length="3.3997705800673077e+0"/>
+            <object id="133" name="Eucalyptus_Sm01" s="2.4677033137793323e+1" t="6.3676637803585692e+0" zOffset="-5.1211694770606631e-1" hdg="-2.8979083895683289e-1" roll="-3.6725580692291260e-2" pitch="-1.6203939449042082e-3" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="132" name="Eucalyptus_Sm01" s="3.0000678780780568e+1" t="5.6848903145478857e+0" zOffset="-5.4489329345187931e-1" hdg="1.7839963436126709e+0" roll="6.0179312713444233e-3" pitch="-2.0977267995476723e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="50" name="Bush_Sm01" s="3.4046104326851456e+1" t="1.6891559443260817e+1" zOffset="-2.6457141220294383e-1" hdg="-2.2247838973999023e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.0454124549340547e+0" width="3.0185179299598817e+0" length="3.1075468650581781e+0"/>
+            <object id="131" name="Eucalyptus_Sm01" s="3.5735672751842742e+1" t="5.6530036423072829e+0" zOffset="-5.3862656022388000e-1" hdg="2.7404563426971436e+0" roll="-7.7539205551147461e-2" pitch="6.9244556128978729e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="43" name="Eucalyptus_Sm01" s="3.6045887597570548e+1" t="2.2796609296306684e+1" zOffset="-2.8046857117500146e-1" hdg="1.0572174787521362e+0" roll="2.6851663365960121e-2" pitch="1.9630766473710537e-3" orientation="-" type="tree" height="6.1745138158874378e+0" width="4.1853305857028023e+0" length="3.3706910297886656e+0"/>
+            <object id="44" name="Eucalyptus_Sm01" s="3.7058311869794515e+1" t="2.5896579471390680e+1" zOffset="-2.4974713197681364e-1" hdg="-1.0120567083358765e+0" roll="3.6375220865011215e-2" pitch="-8.4760509431362152e-2" orientation="-" type="tree" height="6.1885833519049900e+0" width="4.1948682982456562e+0" length="3.3783712824752259e+0"/>
+            <object id="45" name="Bush_Sm01" s="3.8533267496046399e+1" t="2.3621221860985059e+1" zOffset="-2.2849017933554350e-1" hdg="-1.8363345861434937e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.1338351520882330e+0" width="3.1490079369121586e+0" length="3.2418855774445441e+0"/>
+            <object id="49" name="Bush_Sm01" s="4.0378368342344871e+1" t="2.7115725330659671e+1" zOffset="-1.4507663052658892e-1" hdg="2.9035975933074951e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.3382554200555390e+0" width="3.4506810378602819e+0" length="3.5524563015138155e+0"/>
+            <object id="130" name="Eucalyptus_Sm01" s="4.0887961332047865e+1" t="6.3396238129921869e+0" zOffset="-5.2219131841961264e-1" hdg="-2.3238839209079742e-1" roll="-1.2284686788916588e-2" pitch="-4.3343357741832733e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="46" name="Bush_Sm01" s="4.2003317267642551e+1" t="1.7962985123054807e+1" zOffset="-2.7411439746663607e-1" hdg="-1.8351092934608459e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.0220282160261513e+0" width="2.9840087665379089e+0" length="3.0720198795984111e+0"/>
+            <object id="19" name="Bush_Sm01" s="4.2110910086964815e+1" t="-3.7545172286425270e+0" zOffset="-1.7876583971916246e-1" hdg="2.3562891483306885e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2556924134309653e+0" width="3.3288388491776799e+0" length="3.4270204683473451e+0"/>
+            <object id="129" name="Eucalyptus_Sm01" s="4.6775060289868620e+1" t="6.4275445219854248e+0" zOffset="-4.7514046182207081e-1" hdg="-1.4349462985992432e+0" roll="6.3567794859409332e-2" pitch="-5.0844050943851471e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="48" name="Bush_Sm01" s="4.9889278773176173e+1" t="1.7001791784410074e+1" zOffset="-2.1728570301922789e-1" hdg="-2.4086642265319824e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.1612934714790839e+0" width="3.1895293994026419e+0" length="3.2836021902498045e+0"/>
+            <object id="128" name="Eucalyptus_Sm01" s="5.1584409224498664e+1" t="6.0302854633655585e+0" zOffset="-3.1559401154991784e-1" hdg="1.5988970994949341e+0" roll="1.0408087633550167e-2" pitch="8.4796883165836334e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="127" name="Eucalyptus_Sm01" s="5.7723964912035377e+1" t="6.1653002554789396e+0" zOffset="-2.6391996936274076e-1" hdg="-2.6160018444061279e+0" roll="3.7887174636125565e-2" pitch="-5.1997505128383636e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="126" name="Eucalyptus_Sm01" s="6.2351413547392802e+1" t="6.2296292304458376e+0" zOffset="-6.9129003736863615e-1" hdg="1.0556098222732544e+0" roll="7.8694984316825867e-2" pitch="-1.9773561507463455e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="125" name="Eucalyptus_Sm01" s="6.8412052391801055e+1" t="6.4014649695069465e+0" zOffset="-6.0105534264217608e-1" hdg="-1.3160388469696045e+0" roll="2.7977637946605682e-2" pitch="4.4728789478540421e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="124" name="Eucalyptus_Sm01" s="7.3603936473364612e+1" t="6.5154023222972057e+0" zOffset="-7.2529422218369877e-1" hdg="-6.5120482444763184e-1" roll="2.7003915980458260e-2" pitch="7.4671022593975067e-3" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="123" name="Eucalyptus_Sm01" s="7.9004795645567270e+1" t="5.9044835382258611e+0" zOffset="-4.2653477279070706e-1" hdg="2.3986485004425049e+0" roll="5.8277778327465057e-2" pitch="-8.1116102635860443e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="122" name="Eucalyptus_Sm01" s="8.4805477376563175e+1" t="6.3153476011421219e+0" zOffset="-6.4697316392688498e-1" hdg="-2.6820402145385742e+0" roll="4.7116506844758987e-2" pitch="-3.1802129000425339e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="121" name="Eucalyptus_Sm01" s="8.9535060746212380e+1" t="6.5019871810437451e+0" zOffset="-6.0963078053523967e-1" hdg="1.3108140230178833e+0" roll="3.1858783215284348e-2" pitch="2.3574111983180046e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="120" name="Eucalyptus_Sm01" s="9.5047783435221845e+1" t="6.4546005648452649e+0" zOffset="-7.0099052628674252e-1" hdg="1.6684004068374634e+0" roll="6.0426123440265656e-2" pitch="-5.1690872758626938e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="57" name="Eucalyptus_Sm01" s="9.9666738135803698e+1" t="3.2655333733566010e+1" zOffset="-5.9447191021182544e-1" hdg="-1.9021751880645752e+0" roll="-8.7180569767951965e-2" pitch="2.7370205149054527e-2" orientation="+" type="tree" height="5.4973544983012568e+0" width="3.7263251308302694e+0" length="3.0010267486299527e+0"/>
+            <object id="119" name="Eucalyptus_Sm01" s="1.0068247584177129e+2" t="6.3789748564606725e+0" zOffset="-3.7304615819354270e-1" hdg="2.2475252151489258e+0" roll="5.7192584499716759e-3" pitch="4.4823635369539261e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="118" name="Eucalyptus_Sm01" s="1.0657091200866935e+2" t="6.6909193881401308e+0" zOffset="-5.0914095477633614e-1" hdg="-2.0146977901458740e+0" roll="-4.2041465640068054e-2" pitch="5.2223186939954758e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="117" name="Eucalyptus_Sm01" s="1.1162817092922774e+2" t="6.6213857272144310e+0" zOffset="-7.0138554472513004e-1" hdg="-1.4448039531707764e+0" roll="1.1340685188770294e-2" pitch="6.1683908104896545e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="116" name="Eucalyptus_Sm01" s="1.1620594433052139e+2" t="6.1197207083019123e+0" zOffset="-6.4790003390249051e-1" hdg="1.4067991971969604e+0" roll="3.8171648979187012e-2" pitch="5.0446499139070511e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="115" name="Eucalyptus_Sm01" s="1.2166417643850281e+2" t="5.6353156734084848e+0" zOffset="-2.6715056418912120e-1" hdg="2.5370769500732422e+0" roll="7.4408710002899170e-2" pitch="-1.2493547983467579e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="13" name="Eucalyptus_Sm01" s="1.2541743273256975e+2" t="7.2592621358713529e+0" zOffset="-3.9586146187457416e-1" hdg="-9.3686759471893311e-1" roll="-3.0762157402932644e-3" pitch="2.1449176594614983e-2" orientation="-" type="tree" height="5.9274408229075899e+0" width="4.0178549105720549e+0" length="3.2358128520557425e+0"/>
+            <object id="114" name="Eucalyptus_Sm01" s="1.2709730258490721e+2" t="6.2947744353298845e+0" zOffset="-6.7023878811500470e-1" hdg="-2.0056395530700684e+0" roll="-9.9089015275239944e-3" pitch="1.2615698389708996e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+        </objects>
+        <signals>
+            <signal name="Sign_BlankYellow" id="11" s="2.2290915872458608e+0" t="2.8225526761134176e+0" zOffset="7.6715619138771238e+0" hOffset="-3.0207538604736328e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" dynamic="no" country="OpenDRIVE" type="-1" subtype="-1" value="-1.0000000000000000e+0" text="" height="2.0000000000000000e+0" width="2.5000000000000000e+0">
+                <validity fromLane="0" toLane="0"/>
+                <userData>
+                    <vectorSignal signalId="{a79ce77d-0cab-4664-bd9c-be0f235fc925}"/>
+                </userData>
+            </signal>
+        </signals>
+    </road>
+    <road name="Road 3" length="4.8321343123053225e+1" id="3" junction="-1">
+        <link>
+            <predecessor elementType="junction" elementId="4"/>
+        </link>
+        <type s="0.0000000000000000e+0" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <planView>
+            <geometry s="0.0000000000000000e+0" x="-2.4980887937780270e+1" y="-1.7480092754980768e+2" hdg="1.5745459813054521e+0" length="1.1695710126569775e+1">
+                <line/>
+            </geometry>
+            <geometry s="1.1695710126569775e+1" x="-2.5024742707244666e+1" y="-1.6310529964345130e+2" hdg="1.5745459813054521e+0" length="2.4552305425354770e-1">
+                <arc curvature="2.0000000000000000e-3"/>
+            </geometry>
+            <geometry s="1.1941233180823321e+1" x="-2.5025723612823345e+1" y="-1.6285977855111310e+2" hdg="1.5750370274138563e+0" length="3.6380109942229900e+1">
+                <line/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.1830763863147990e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="3.5870763863147985e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </elevationProfile>
+        <lateralProfile>
+            <superelevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </lateralProfile>
+        <lanes>
+            <laneOffset s="0.0000000000000000e+0" a="-5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneSection s="0.0000000000000000e+0" singleSide="false">
+                <left>
+                    <lane id="4" type="shoulder" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{ab27cfe9-84a1-477a-aad1-d3371324c938}" travelDir="undirected"/>
+                        </userData>
+                    </lane>
+                    <lane id="3" type="driving" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="3.4430653527480688e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{fab99b37-469c-404c-9159-f820f4da3334}" travelDir="backward"/>
+                        </userData>
+                    </lane>
+                    <lane id="2" type="driving" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="3.5000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="broken" material="standard" color="white" width="1.2500000000000000e-1" laneChange="both"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{8447eba1-0e6b-4477-8ec7-c694c0c64b34}" travelDir="backward"/>
+                        </userData>
+                    </lane>
+                    <lane id="1" type="shoulder" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{51bd513d-2920-477d-b0b8-369f655d357a}" travelDir="undirected"/>
+                        </userData>
+                    </lane>
+                </left>
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <userData/>
+                    </lane>
+                </center>
+                <userData>
+                    <vectorLaneSection>
+                        <carriageway rightBoundary="0" leftBoundary="4"/>
+                    </vectorLaneSection>
+                </userData>
+            </laneSection>
+        </lanes>
+        <objects>
+            <object id="146" name="Eucalyptus_Sm01" s="7.2291828298898841e-1" t="-3.1016141369946375e+0" zOffset="-6.6202188071717893e-1" hdg="1.8877897262573242e+0" roll="5.3674515336751938e-2" pitch="-2.8843881562352180e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="32" name="Bush_Sm01" s="4.4637221541838166e+0" t="-1.8023803993404997e+0" zOffset="-1.6562404480362558e-1" hdg="1.6728962659835815e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2878984346650331e+0" width="3.3763668154788129e+0" length="3.4759502365676185e+0"/>
+            <object id="145" name="Eucalyptus_Sm01" s="5.8020398360715948e+0" t="-3.0560923604538601e+0" zOffset="-4.6223666742465275e-1" hdg="1.8913170099258423e+0" roll="-1.2107080779969692e-2" pitch="4.9606852233409882e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="36" name="Bush_Sm01" s="1.0672663786384250e+1" t="-1.2709002286673261e+0" zOffset="-2.2880468210142069e-1" hdg="-5.3660976886749268e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.1330644139340378e+0" width="3.1478705232437965e+0" length="3.2407146166083298e+0"/>
+            <object id="144" name="Eucalyptus_Sm01" s="1.1419314540009051e+1" t="-2.6583779882508409e+0" zOffset="-6.2788174384769002e-1" hdg="-2.0552837848663330e+0" roll="-7.1675190702080727e-3" pitch="-5.4383359849452972e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="37" name="Bush_Sm01" s="1.3836225142151960e+1" t="-1.8622833538631802e+0" zOffset="-1.7184408007409802e-1" hdg="-2.5704035758972168e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2726552666438482e+0" width="3.3538715213094141e+0" length="3.4527914604739460e+0"/>
+            <object id="143" name="Eucalyptus_Sm01" s="1.6049787968012250e+1" t="-3.1219245455504279e+0" zOffset="-4.0364657994033282e-1" hdg="2.2325141429901123e+0" roll="7.0019289851188660e-2" pitch="-5.0737071782350540e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="142" name="Eucalyptus_Sm01" s="2.0962377785339957e+1" t="-2.4138872060499672e+0" zOffset="-4.8012808585456224e-1" hdg="1.0590812563896179e-1" roll="8.4434628486633301e-2" pitch="-8.7645966559648514e-3" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="141" name="Eucalyptus_Sm01" s="2.6093858100207704e+1" t="-2.4068347586887597e+0" zOffset="-4.9555105365061491e-1" hdg="-6.6673725843429565e-2" roll="-2.7573242783546448e-2" pitch="1.2647588737308979e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="140" name="Eucalyptus_Sm01" s="3.1167205652183977e+1" t="-2.4088450457950579e+0" zOffset="-6.7558111119148689e-1" hdg="-2.2999010980129242e-1" roll="-1.0840441100299358e-2" pitch="-8.3876296877861023e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="18" name="Bush_Sm01" s="3.3434457802525245e+1" t="9.6741113078710903e+0" zOffset="-1.8414188579621382e-1" hdg="-2.2605357170104980e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2425175727622717e+0" width="3.3093957946332329e+0" length="3.4070039554099663e+0"/>
+            <object id="139" name="Eucalyptus_Sm01" s="3.5980562954275555e+1" t="-3.5785571779339769e+0" zOffset="-3.6562612387376703e-1" hdg="1.9515022039413452e+0" roll="-5.8624133467674255e-2" pitch="-2.8764566406607628e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="14" name="Eucalyptus_Sm01" s="4.4740103517667791e+1" t="-6.3395208157259191e+0" zOffset="-4.3653353291700947e-1" hdg="2.1496138572692871e+0" roll="-4.9947660416364670e-2" pitch="-1.9231610000133514e-2" orientation="+" type="tree" height="5.8377251765910483e+0" width="3.9570417530377502e+0" length="3.1868366198160727e+0"/>
+            <object id="15" name="Eucalyptus_Sm01" s="4.5208728430338262e+1" t="-2.1207645884269226e+0" zOffset="-2.5319050589534742e-1" hdg="3.6059764027595520e-1" roll="7.9433023929595947e-2" pitch="4.2544696480035782e-2" orientation="-" type="tree" height="6.2226285129600676e+0" width="4.2179452262546482e+0" length="3.3969566948525460e+0"/>
+        </objects>
+    </road>
+    <road name="Road 5" length="2.6305264660901202e+1" id="5" junction="4">
+        <link>
+            <predecessor elementType="road" elementId="0" contactPoint="start"/>
+            <successor elementType="road" elementId="2" contactPoint="start"/>
+        </link>
+        <type s="0.0000000000000000e+0" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <type s="2.1000000000000001e+0" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <type s="1.4932969903059815e+1" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <planView>
+            <geometry s="0.0000000000000000e+0" x="-3.1825141677000101e+1" y="-2.0116601255855659e+2" hdg="1.5745459813054521e+0" length="2.1000000000000001e+0">
+                <line/>
+            </geometry>
+            <geometry s="2.1000000000000001e+0" x="-3.1833015933020352e+1" y="-1.9906602732144370e+2" hdg="1.5745459813054521e+0" length="2.4205264660901200e+1">
+                <arc curvature="8.4918793537299125e-3"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="2.1000000000000001e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.4932969903059815e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </elevationProfile>
+        <lateralProfile>
+            <superelevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <superelevation s="2.1000000000000001e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <superelevation s="1.4932969903059815e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </lateralProfile>
+        <lanes>
+            <laneOffset s="0.0000000000000000e+0" a="4.4408920985006262e-15" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneOffset s="2.1000000000000001e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneOffset s="1.4932969903059815e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneSection s="0.0000000000000000e+0" singleSide="false">
+                <left>
+                    <lane id="1" type="driving" level="false">
+                        <link>
+                            <predecessor id="-4"/>
+                            <successor id="1"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="3.4999999999999991e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="2.1000000000000001e+0" a="3.4999999999999991e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="1.4932969903059815e+1" a="3.4999999999999991e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{1890a7b9-1c07-4df3-8f92-2430b282d9d0}" travelDir="backward">
+                                <predecessor id="-4" virtual="false"/>
+                                <successor id="1" virtual="false"/>
+                            </vectorLane>
+                            <vectorLane sOffset="2.1000000000000001e+0" laneId="{6e805dee-2728-47f4-828b-d07cf7908da7}" travelDir="backward">
+                                <predecessor id="-4" virtual="false"/>
+                                <successor id="1" virtual="false"/>
+                            </vectorLane>
+                            <vectorLane sOffset="1.4932969903059815e+1" laneId="{e0dd87a5-0913-408b-a90b-a30202d45290}" travelDir="backward">
+                                <predecessor id="-4" virtual="false"/>
+                                <successor id="1" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                </left>
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0.0000000000000000e+0" type="broken" material="standard" color="white" width="1.2500000000000000e-1" laneChange="both"/>
+                        <roadMark sOffset="2.1000000000000001e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <roadMark sOffset="2.3100000000000001e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <userData/>
+                    </lane>
+                </center>
+                <userData>
+                    <vectorLaneSection>
+                        <carriageway rightBoundary="0" leftBoundary="1"/>
+                    </vectorLaneSection>
+                </userData>
+            </laneSection>
+        </lanes>
+        <objects>
+            <object id="61" name="Eucalyptus_Sm01" s="2.2853306867129630e+0" t="7.4893305886653181e+0" zOffset="-2.7609858523141328e-1" hdg="2.9272217750549316e+0" roll="8.1460498273372650e-2" pitch="2.6389105245471001e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="23" name="TrafficCone01" s="3.8085020303693042e+0" t="-2.6269769801396592e-1" zOffset="4.5776367185723643e-7" hdg="2.3294410705566406e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="obstacle" height="5.0000795364379891e-1" width="2.7508546780566856e-1" length="2.7508552502612116e-1"/>
+            <object id="60" name="Eucalyptus_Sm01" s="7.9642731644447746e+0" t="7.7987489778565617e+0" zOffset="-3.0044689475669045e-1" hdg="-2.5617034435272217e+0" roll="-1.4965718612074852e-2" pitch="-1.3903503713663667e-4" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="59" name="Eucalyptus_Sm01" s="1.2638869252530110e+1" t="7.5194524210869744e+0" zOffset="-3.9094611119637657e-1" hdg="1.4791642427444458e+0" roll="7.3571585118770599e-2" pitch="-3.3968374133110046e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="12" name="Eucalyptus_Sm01" s="1.7812152792451279e+1" t="6.1777436582690086e+0" zOffset="-6.7608664469461732e-1" hdg="-1.8549104928970337e+0" roll="5.7419128715991974e-2" pitch="-3.0726773664355278e-2" orientation="+" type="tree" height="5.1785532701218528e+0" width="3.5102291347060102e+0" length="2.8269921331874470e+0"/>
+            <object id="58" name="Eucalyptus_Sm01" s="1.7993088465991242e+1" t="7.4113748898584504e+0" zOffset="-5.4810913054919519e-1" hdg="6.6593343019485474e-1" roll="7.6607778668403625e-2" pitch="-5.1849495619535446e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="38" name="Bush_Sm01" s="1.9534154565133356e+1" t="5.4165335425818313e+0" zOffset="-2.1662215387396899e-1" hdg="2.1086404323577881e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.1629196023081985e+0" width="3.1919290246326799e+0" length="3.2860725906363339e+0"/>
+            <object id="138" name="Eucalyptus_Sm01" s="2.3651953810624050e+1" t="6.8111075915524140e+0" zOffset="-4.9833974802776870e-1" hdg="1.3319218158721924e+0" roll="-4.8724386841058731e-2" pitch="4.8174101859331131e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="53" name="Bush_Sm01" s="2.6233436843934150e+1" t="3.7268124232894024e+1" zOffset="-1.7268055605945276e-1" hdg="7.2755783796310425e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.2706053515813114e+0" width="3.3508464325447571e+0" length="3.4496771489723219e+0"/>
+        </objects>
+    </road>
+    <road name="Road 8" length="2.6339236136852016e+1" id="8" junction="4">
+        <link>
+            <predecessor elementType="road" elementId="0" contactPoint="start"/>
+            <successor elementType="road" elementId="3" contactPoint="start"/>
+        </link>
+        <type s="0.0000000000000000e+0" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <type s="2.1000000000000001e+0" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <type s="1.4917514985977006e+1" type="town">
+            <speed max="30" unit="mph"/>
+        </type>
+        <planView>
+            <geometry s="0.0000000000000000e+0" x="-2.4882125133628190e+1" y="-2.0113997852324570e+2" hdg="1.5745459813054521e+0" length="2.6339236136852016e+1">
+                <line/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="2.1000000000000001e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.4130000000000004e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <elevation s="1.4917514985977006e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </elevationProfile>
+        <lateralProfile>
+            <superelevation s="0.0000000000000000e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <superelevation s="2.1000000000000001e+0" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <superelevation s="1.4917514985977006e+1" a="0.0000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+        </lateralProfile>
+        <lanes>
+            <laneOffset s="0.0000000000000000e+0" a="-5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneOffset s="2.1000000000000001e+0" a="-5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneOffset s="1.4917514985977006e+1" a="-5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+            <laneSection s="0.0000000000000000e+0" singleSide="false">
+                <left>
+                    <lane id="3" type="driving" level="false">
+                        <link>
+                            <predecessor id="-3"/>
+                            <successor id="3"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="3.4430653527480688e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="2.1000000000000001e+0" a="3.4430653527480688e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="1.4917514985977006e+1" a="3.4430653527480688e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="broken" material="standard" color="white" width="1.2500000000000000e-1" laneChange="both"/>
+                        <roadMark sOffset="2.1000000000000001e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{50477e69-e8a8-44bd-be6f-af4b95f38499}" travelDir="backward">
+                                <predecessor id="-3" virtual="false"/>
+                                <successor id="3" virtual="false"/>
+                            </vectorLane>
+                            <vectorLane sOffset="2.1000000000000001e+0" laneId="{2e043ac3-bbba-455b-bfc9-5f61099b9d32}" travelDir="backward">
+                                <predecessor id="-3" virtual="false"/>
+                                <successor id="3" virtual="false"/>
+                            </vectorLane>
+                            <vectorLane sOffset="1.4917514985977006e+1" laneId="{ec20cdf6-1341-4c81-bcd4-d2ba4cd35779}" travelDir="backward">
+                                <predecessor id="-3" virtual="false"/>
+                                <successor id="3" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="2" type="driving" level="false">
+                        <link>
+                            <predecessor id="-2"/>
+                            <successor id="2"/>
+                        </link>
+                        <width sOffset="0.0000000000000000e+0" a="3.5000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="2.1000000000000001e+0" a="3.5000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="1.4917514985977006e+1" a="3.5000000000000000e+0" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="broken" material="standard" color="white" width="1.2500000000000000e-1" laneChange="both"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{43b9b4b1-ec7c-4916-86e8-c86f404965a6}" travelDir="backward">
+                                <predecessor id="-2" virtual="false"/>
+                                <successor id="2" virtual="false"/>
+                            </vectorLane>
+                            <vectorLane sOffset="2.1000000000000001e+0" laneId="{290a685f-1289-43de-8c05-b9137433c9ce}" travelDir="backward">
+                                <predecessor id="-2" virtual="false"/>
+                                <successor id="2" virtual="false"/>
+                            </vectorLane>
+                            <vectorLane sOffset="1.4917514985977006e+1" laneId="{66aad8b9-ff98-4689-b3e7-543339999ddf}" travelDir="backward">
+                                <predecessor id="-2" virtual="false"/>
+                                <successor id="2" virtual="false"/>
+                            </vectorLane>
+                        </userData>
+                    </lane>
+                    <lane id="1" type="none" level="false">
+                        <width sOffset="0.0000000000000000e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="2.1000000000000001e+0" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <width sOffset="1.4917514985977006e+1" a="5.0000000000000000e-1" b="0.0000000000000000e+0" c="0.0000000000000000e+0" d="0.0000000000000000e+0"/>
+                        <roadMark sOffset="0.0000000000000000e+0" type="solid" material="standard" color="white" width="1.2500000000000000e-1" laneChange="none"/>
+                        <speed sOffset="0.0000000000000000e+0" max="3.0000000000000000e+1" unit="mph"/>
+                        <userData>
+                            <vectorLane sOffset="0.0000000000000000e+0" laneId="{e9c0adb4-c27a-4206-834c-236211201fd7}" travelDir="undirected"/>
+                            <vectorLane sOffset="2.1000000000000001e+0" laneId="{dcddc3a9-b52c-4110-b8f8-9797df24ea69}" travelDir="undirected"/>
+                            <vectorLane sOffset="1.4917514985977006e+1" laneId="{883e57f2-1e17-42a6-8f5f-0361d8ffecbb}" travelDir="undirected"/>
+                        </userData>
+                    </lane>
+                </left>
+                <center>
+                    <lane id="0" type="none" level="false">
+                        <roadMark sOffset="0.0000000000000000e+0" type="none" material="standard" color="white" laneChange="none"/>
+                        <userData/>
+                    </lane>
+                </center>
+                <userData>
+                    <vectorLaneSection>
+                        <carriageway rightBoundary="0" leftBoundary="3"/>
+                    </vectorLaneSection>
+                </userData>
+            </laneSection>
+        </lanes>
+        <objects>
+            <object id="151" name="Eucalyptus_Sm01" s="1.8970585134077749e+0" t="-2.5167243597935034e+0" zOffset="-5.7425085972814705e-1" hdg="-6.6158086061477661e-1" roll="6.3129283487796783e-2" pitch="-8.0494835972785950e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="52" name="Bush_Sm01" s="4.4431439134197834e+0" t="-2.1259712040133731e+1" zOffset="-2.0268534445342667e-1" hdg="1.1640041321516037e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.1970715936429013e+0" width="3.2423288290464147e+0" length="3.3379588996924907e+0"/>
+            <object id="34" name="Bush_Sm01" s="6.0163552017080546e+0" t="-4.6094953898682824e+0" zOffset="-2.1369359376074504e-1" hdg="2.8454601764678955e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.1700964963168112e+0" width="3.2025204069278668e+0" length="3.2969763578531412e+0"/>
+            <object id="150" name="Eucalyptus_Sm01" s="7.3788631642550468e+0" t="-2.7992881971452022e+0" zOffset="-2.6018814947617841e-1" hdg="-2.0097169876098633e+0" roll="3.2197605818510056e-2" pitch="-3.3999923616647720e-2" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="149" name="Eucalyptus_Sm01" s="1.1745426979306870e+1" t="-2.7920642792662171e+0" zOffset="-4.9852285484966163e-1" hdg="7.1051478385925293e-1" roll="-4.7601148486137390e-2" pitch="7.6678238809108734e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="35" name="Bush_Sm01" s="1.5233414892318415e+1" t="-1.5581593018050839e+0" zOffset="-1.6227508427766768e-1" hdg="1.3879519701004028e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.2961055855530401e+0" width="3.3884782280892107e+0" length="3.4884188662601279e+0"/>
+            <object id="148" name="Eucalyptus_Sm01" s="1.7327834497314804e+1" t="-3.1270359863139241e+0" zOffset="-4.3884843142692542e-1" hdg="3.0326340198516846e+0" roll="-7.4359036982059479e-2" pitch="1.1217076098546386e-3" orientation="+" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="30" name="Bush_Sm01" s="1.8911750950198400e+1" t="-3.0120511520608417e+0" zOffset="-1.9284051416943404e-1" hdg="-1.8042454719543457e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="+" type="vegetation" height="2.2212002251780398e+0" width="3.2779368725312739e+0" length="3.3746171758630412e+0"/>
+            <object id="20" name="Bush_Sm01" s="2.1439893924258477e+1" t="-1.1622886635097121e+1" zOffset="-2.8178734396304017e-1" hdg="-3.9570865035057068e-1" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.0032221249682127e+0" width="2.9562556181211579e+0" length="3.0434481727677296e+0"/>
+            <object id="147" name="Eucalyptus_Sm01" s="2.1851925026889450e+1" t="-2.7423018895925502e+0" zOffset="-4.5333171538642425e-1" hdg="6.2506747245788574e-1" roll="-4.2928520590066910e-2" pitch="-2.5637945160269737e-2" orientation="-" type="tree" height="5.6626220703124996e+0" width="3.8383503373840631e+0" length="3.0912472838014082e+0"/>
+            <object id="31" name="Bush_Sm01" s="2.5776241322996210e+1" t="-2.2647007106930452e+0" zOffset="-2.5623726901450128e-1" hdg="1.4352979660034180e+0" roll="0.0000000000000000e+0" pitch="0.0000000000000000e+0" orientation="-" type="vegetation" height="2.0658365746391505e+0" width="3.0486587244364496e+0" length="3.1385766397884765e+0"/>
+        </objects>
+    </road>
+    <junction id="4" name="junction4">
+        <connection id="0" incomingRoad="2" connectingRoad="5" contactPoint="end">
+            <laneLink from="1" to="1"/>
+        </connection>
+        <connection id="1" incomingRoad="3" connectingRoad="8" contactPoint="end">
+            <laneLink from="3" to="3"/>
+            <laneLink from="2" to="2"/>
+        </connection>
+        <userData>
+            <vectorJunction junctionId="{ce7c3bde-e318-492d-8fad-62ef15b98886}"/>
+        </userData>
+    </junction>
+</OpenDRIVE>

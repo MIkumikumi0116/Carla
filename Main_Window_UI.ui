@@ -1,0 +1,720 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Main_Window_UI</class>
+ <widget class="QMainWindow" name="Main_Window_UI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#Main_Window_UI{
+	background: rgb(44,42,56);
+}</string>
+  </property>
+  <widget class="QWidget" name="Central_Widget">
+   <layout class="QVBoxLayout" name="Central_Widget">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QWidget" name="Title_Widget" native="true">
+      <property name="styleSheet">
+       <string notr="true">#Title_Widget{
+	background: rgb(24,22,36);
+}
+
+#Title_Widget QPushButton{
+	border: 0px;
+
+	width: 50px;
+	height: 30px;
+
+	background: rgb(24,22,36);
+}
+#Title_Widget QPushButton:hover{
+	background: rgb(64,62,76);
+}
+#Title_Widget QPushButton:pressed{
+	background: rgb(84,82,96);
+}</string>
+      </property>
+      <layout class="QHBoxLayout" name="Title_Layout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Minimsize_Button">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Main_Window_UI.qrc">
+           <normaloff>:/All_Image/res/Minimsize.png</normaloff>:/All_Image/res/Minimsize.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Maxmsize_Button">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Main_Window_UI.qrc">
+           <normaloff>:/All_Image/res/Maxmsize.png</normaloff>:/All_Image/res/Maxmsize.png</iconset>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="Close_Button">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="icon">
+          <iconset resource="Main_Window_UI.qrc">
+           <normaloff>:/All_Image/res/Close.png</normaloff>:/All_Image/res/Close.png</iconset>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="Central_Layout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QWidget" name="Tab_Widget" native="true">
+        <property name="styleSheet">
+         <string notr="true">#Tab_Widget{
+	background: rgb(66,66,88);
+}
+
+#Tab_Widget QPushButton {
+	padding-left: 40px;
+	border-top: 1px;
+	border-style: solid;
+	border-radius: 0px;
+	border-color: rgb(125,125,155);
+	margin: 0px;
+
+	width: 140px;
+	height: 60px;
+
+	background: rgb(85,85,115);
+	color: rgb(255,255,255);
+	
+	font-family: 'MicroSoft YaHei Light';
+	font-size: 20px;
+	text-align: left
+}
+#Tab_Widget QPushButton:hover {
+	background: rgb(105,105,125);
+}
+#Tab_Widget QPushButton:pressed {
+	background: rgb(125,125,145);
+}
+
+</string>
+        </property>
+        <layout class="QVBoxLayout" name="Tab_Layout">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <property name="bottomMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QPushButton" name="Sim_Setting_Button">
+           <property name="styleSheet">
+            <string notr="true">#Sim_Setting_Button{
+	border-top: 0px;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}</string>
+           </property>
+           <property name="text">
+            <string>仿真设置</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QWidget" name="Evaluation_Widget" native="true">
+           <layout class="QVBoxLayout" name="Evaluation_Widget">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="Safety_Assess_Button">
+              <property name="styleSheet">
+               <string notr="true">#Safety_Assess_Button{
+	border-top: 0px;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}</string>
+              </property>
+              <property name="text">
+               <string>安全评价</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Conflict_Assess_Button">
+              <property name="text">
+               <string>冲突评价</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Stability_Assess_Button">
+              <property name="text">
+               <string>稳定性评价</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Effectiveness_Assess_Button">
+              <property name="text">
+               <string>效率评价</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Coprehensive_Assess_Button">
+              <property name="text">
+               <string>综合评价</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Service_Assess_Button">
+              <property name="text">
+               <string>服务水平</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="Carbin_Assess_Button">
+              <property name="styleSheet">
+               <string notr="true">#Carbin_Assess_Button{
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}</string>
+              </property>
+              <property name="text">
+               <string>碳排放评价</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>40</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QStackedWidget" name="Main_Stacked_Widget">
+        <property name="styleSheet">
+         <string notr="true">#Main_Stacked_Widget QLabel{
+	color: rgb(255,255,255);
+	
+	font-family: 'MicroSoft YaHei Light';
+	font-size: 20px;
+}
+
+#Main_Stacked_Widget QSlider::handle:horizontal{
+	border: 3px;
+	border-style: solid ;
+	border-radius: 12px;
+	border-color: rgb(255,255,255);
+	margin: -11px 0px -11px 0px;
+
+	width: 18px;
+	height: 20px;
+
+	background: rgb(46, 121, 199);
+}
+#Main_Stacked_Widget QSlider::groove:horizontal{
+	height: 2px;
+	background : rgb(219,219,219);
+}
+#Main_Stacked_Widget QSlider::add-page:horizontal{
+	background-color: rgb(219,219,219);
+}
+#Main_Stacked_Widget QSlider::sub-page:horizontal{
+	background-color: rgb(16, 71, 169);
+}
+
+#Main_Stacked_Widget QLineEdit{
+	padding-left: 10px;
+	border: 0px;
+	border-radius: 8px;
+
+	width: 40px;
+	height: 27px;
+
+	background: rgb(22, 22, 37);
+	color: rgb(255,255,255);
+	
+	font-family: 'MicroSoft YaHei Light';
+}
+
+#Main_Stacked_Widget QPushButton {
+	
+	margin: 0px;
+	border: 0px;
+	border-radius: 20px;
+
+	width: 140px;
+	height: 60px;
+
+	background: rgb(85,85,115);
+	color: rgb(255,255,255);
+	
+	font-family: 'MicroSoft YaHei Light';
+	font-size: 20px;
+	text-align: center
+}
+  </string>
+        </property>
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="Setting_Page">
+         <layout class="QVBoxLayout" name="Setting_Page_2" stretch="3,1">
+          <item>
+           <widget class="QWidget" name="Sim_Setting_Grid_Widget" native="true">
+            <layout class="QGridLayout" name="gridLayout_3">
+             <property name="horizontalSpacing">
+              <number>20</number>
+             </property>
+             <item row="0" column="1">
+              <widget class="QWidget" name="Ramp_Traffic_Cell_Widget" native="true">
+               <layout class="QHBoxLayout" name="Ramp_Traffic_Cell_Widget" stretch="1,1,1">
+                <item>
+                 <widget class="QLabel" name="Ramp_Traffic_Label">
+                  <property name="text">
+                   <string>匝道车流量</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="Ramp_Traffi_Slider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="Ramp_Traffic_LineEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QWidget" name="Main_Traffic_Cell_Widget" native="true">
+               <layout class="QHBoxLayout" name="Main_Traffic_Cell_Widget" stretch="1,1,0">
+                <item>
+                 <widget class="QLabel" name="Main_Traffic_Label">
+                  <property name="text">
+                   <string>主路车流量</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="Main_Traffic_Slider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="Main_Traffic_LineEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QWidget" name="Speed_Cell_Widget" native="true">
+               <layout class="QHBoxLayout" name="Speed_Cell_Widget" stretch="1,1,0">
+                <item>
+                 <widget class="QLabel" name="Speed_Label">
+                  <property name="text">
+                   <string>速度设定</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="Speed_Slider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="Speed_LineEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Mixing_Rate_Cell_Widget" native="true">
+               <layout class="QHBoxLayout" name="Mining_Rate_Cell_Widget" stretch="1,1,0">
+                <item>
+                 <widget class="QLabel" name="Mixing_Rate_Label">
+                  <property name="text">
+                   <string>大车混入率</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="Mixing_Rate_Slider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="Mixing_Rate_LineEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QWidget" name="Intel_Ratio_Cell_Widget" native="true">
+               <layout class="QHBoxLayout" name="Intel_Rate_Cell_Widget" stretch="1,1,0">
+                <item>
+                 <widget class="QLabel" name="Intel_Rate_Label">
+                  <property name="text">
+                   <string>智能车比例</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="Intel_Rate_Slider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="Intel_Rate_LineEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Sim_Step_Cell_Widget" native="true">
+               <layout class="QHBoxLayout" name="Sim_Step_Cell_Widget" stretch="1,1,0">
+                <item>
+                 <widget class="QLabel" name="Sim_Step_Label">
+                  <property name="text">
+                   <string>仿真步长</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSlider" name="Sim_Step_Slider">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>24</height>
+                   </size>
+                  </property>
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="Sim_Step_LineEdit">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string>0</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="Control_Widget">
+            <item>
+             <widget class="QLabel" name="Info_Label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">#Info_Label{
+	padding-left: 40px;
+}</string>
+              </property>
+              <property name="text">
+               <string>提示信息</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QWidget" name="Control_Panel_Widget" native="true">
+              <layout class="QHBoxLayout" name="Control_Panel_Widget_2">
+               <property name="spacing">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QPushButton" name="Start_Sim_Button">
+                 <property name="text">
+                  <string>开始仿真</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="End_Sim_Button">
+                 <property name="text">
+                  <string>结束仿真</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="Export_Data_Button">
+                 <property name="text">
+                  <string>导出数据</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="Help_Button">
+                 <property name="text">
+                  <string>查看帮助</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="Main_Window_UI.qrc"/>
+ </resources>
+ <connections/>
+</ui>
